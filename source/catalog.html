@@ -33,6 +33,7 @@
       <section class="catalog">
         <h1 class="catalog__title">Каталог продукции</h1>
         <section class="catalog__basic basic-catalog">
+          <h2 class="visually-hidden">Основной каталог.</h2>
           <ul class="basic-catalog__list">
             <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
               <div class="basic-card__wrapper">
@@ -141,14 +142,54 @@
             </li>
             <li class="basic-catalog__card basic-catalog__card--show-more basic-catalog__card--without-background basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title">Показать еще 100500 товаров</h3>
+                <h3 class="basic-card__title card-title">Показать еще 100500 товаров</h3>
                 <p class="basic-card__description">На самом деле вкусов гораздо больше!</p>
                 <button class="basic-card__button button button--secondary" type="button">показать все</button>
               </div>
             </li>
           </ul>
         </section>
-        <section class=""></section>
+        <section class="catalog__supplements supplements">
+          <h2 class="supplements__title">Дополнительные товары</h2>
+          <ul class="supplements__list">
+            <li class="supplements__card supplemental-card">
+              <div class="supplemental-card__wrapper">
+                <h3 class="supplemental-card__title card-title">Сахарозаменитель</h3>
+                <dl class="supplemental-card__description card-description-list">
+                  <dt class="card-description-list__parameter supplemental-parameter">1 упаковка (100 г)</dt>
+                  <dd class="card-description-list__value supplemental-value">200 ₽</dd>
+                  <button class="supplemental__button button button--primary" type="button">заказать</button>
+              </div>
+            </li>
+            <li class="supplements__card supplemental-card">
+              <div class="supplemental-card__wrapper">
+                <h3 class="supplemental-card__title card-title">Питьевая вода</h3>
+                <dl class="supplemental-card__description card-description-list">
+                  <dt class="card-description-list__parameter supplemental-parameter">5 литров</dt>
+                  <dd class="card-description-list__value supplemental-value">50 ₽</dd>
+                  <button class="supplemental__button button button--primary" type="button">заказать</button>
+              </div>
+            </li>
+            <li class="supplements__card supplemental-card">
+              <div class="supplemental-card__wrapper">
+                <h3 class="supplemental-card__title card-title">Молоко</h3>
+                <dl class="supplemental-card__description card-description-list">
+                  <dt class="card-description-list__parameter supplemental-parameter">1 литр</dt>
+                  <dd class="card-description-list__value supplemental-value">100 ₽</dd>
+                  <button class="supplemental__button button button--primary" type="button">заказать</button>
+              </div>
+            </li>
+            <li class="supplements__card supplemental-card">
+              <div class="supplemental-card__wrapper">
+                <h3 class="supplemental-card__title card-title">Витамины</h3>
+                <dl class="supplemental-card__description card-description-list">
+                  <dt class="card-description-list__parameter supplemental-parameter">1 упаковка (30 г)</dt>
+                  <dd class="card-description-list__value supplemental-value">300 ₽</dd>
+                  <button class="supplemental__button button button--primary" type="button">заказать</button>
+              </div>
+            </li>
+          </ul>
+        </section>
       </section>
     </main>
   </body>
