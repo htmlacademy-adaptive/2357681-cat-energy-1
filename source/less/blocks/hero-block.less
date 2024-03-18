@@ -3,6 +3,7 @@
 
 
 .hero-block__wrapper--has-background {
+  width: 320px;
   background-color: @green;
   background-image: url("/source/img/pictures/hero-block-background-mobile.jpg");
   background-size: 100% auto;
@@ -10,23 +11,25 @@
 }
 
 .hero-block__title {
+  display: block;
   padding: 0;
   margin: 0;
-  font-family: "Oswald Regular", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: @black;
 
   &--has-background {
-    padding-top: 27px;
-    padding-bottom: 25px;
+    padding: 27px 35px 25px 36px;
     color: @white;
     text-align: center;
   }
 }
 
 .hero-block__slogan {
-  font-family: "Oswald Regular", sans-serif;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: @black;
   font-size: 20px;
@@ -43,6 +46,9 @@
 }
 
 .hero-block__button {
-  margin: 135px;
+  margin-top: 135px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 63.5px;
 }
 
