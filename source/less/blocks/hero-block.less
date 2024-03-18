@@ -1,0 +1,48 @@
+@import "./variables.less";
+@import "./fonts.less";
+
+
+.hero-block__wrapper--has-background {
+  background-color: @green;
+  background-image: url("/source/img/pictures/hero-block-background-mobile.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.hero-block__title {
+  padding: 0;
+  margin: 0;
+  font-family: "Oswald Regular", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  color: @black;
+
+  &--has-background {
+    padding-top: 27px;
+    padding-bottom: 25px;
+    color: @white;
+    text-align: center;
+  }
+}
+
+.hero-block__slogan {
+  font-family: "Oswald Regular", sans-serif;
+  text-transform: uppercase;
+  color: @black;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: left;
+
+  &--has-background {
+    padding-bottom: 164px;
+    font-size: 14px;
+    line-height: 14px;
+    color: @white;
+    text-align: center;
+  }
+}
+
+.hero-block__button {
+  margin: 135px;
+}
+
