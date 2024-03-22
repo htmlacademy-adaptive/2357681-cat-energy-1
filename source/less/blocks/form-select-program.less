@@ -1,0 +1,70 @@
+@import "./variables.less";
+@import "./fonts.less";
+
+.form-select-program__fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 45px;
+  border: none;
+
+  &--with-title {
+    margin-bottom: 24px;
+  }
+}
+
+.form-select-program__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.form-select-program__item {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @specialgrey;
+
+  &:not(:last-child) {
+    padding-bottom: 14px;
+  }
+
+  &--to-write input {
+    padding: 14px;
+  }
+}
+
+.form-select-program__legend {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 35px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form-select-program__textfield {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+}
+
+.form-select-program__textarea {
+  padding: 14px;
+  padding-bottom: 118px;
+}
+
+.form-select-program__required {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.form-select-program__button {
+  padding: 10px 78px;
+  margin-bottom: 21px;
+}

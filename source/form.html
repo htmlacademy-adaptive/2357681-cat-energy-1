@@ -42,15 +42,15 @@
           <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
             <legend class="form-select-program__legend visually-hidden">Данные кота.</legend>
             <ul class="form-select-program__list">
-              <li class="form-select-program__item">
+              <li class="form-select-program__item form-select-program__item--to-write">
                 <label for="name">Имя:*</label>
                 <input type="text" name="name" placeholder="Барсик" id="name" required>
               </li>
-              <li class="form-select-program__item">
+              <li class="form-select-program__item form-select-program__item--to-write">
                 <label for="weight">Вес (кг):*</label>
                 <input type="number" name="weight" placeholder="7" id="weight" min="0" max="30" required>
               </li>
-              <li class="form-select-program__item">
+              <li class="form-select-program__item form-select-program__item--to-write">
                 <label for="age">Возраст (лет):</label>
                 <input type="number" name="age" placeholder="7" id="age" min="0" max="30">
               </li>
@@ -76,20 +76,22 @@
           <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
             <legend class="form-select-program__legend">Контактные данные (владельца кота)</legend>
             <ul class="form-select-program__list">
-              <li class="form-select-program__item">
+              <li class="form-select-program__item form-select-program__item--to-write">
                 <label for="email">E-mail:*</label>
                 <input type="email" name="mail" placeholder="kuklachev@gmail.com" required>
               </li>
+              <li class="form-select-program__item form-select-program__item--to-write">
               <label for="number">Телефон:*</label>
               <input type="tel" name="phone" placeholder="8 (960) 900-60-90" id="number" maxlength="21" required>
+              </li>
             </ul>
           </fieldset>
           <div class="form-select-program__textfield">
-            <label for="message">Комментарий</label>
-            <textarea name="comment" placeholder="Расскажите обо всех повадках кота" id="message"></textarea>
+            <label class="form-select-program__legend" for="message">Комментарий</label>
+            <textarea class="form-select-program__textarea" name="comment" placeholder="Расскажите обо всех повадках кота" id="message"></textarea>
           </div>
           <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
-            <legend class="form-select-program__legend visually-hidden">Дополнительно</legend>
+            <legend class="form-select-program__legend">Дополнительно</legend>
             <ul class="form-select-program__list">
               <li class="form-select-program__item">
                 <input type="checkbox" name="sweetener" id="sweetener" checked>
@@ -111,18 +113,18 @@
           </fieldset>
           <div class="form-select-program__button-wrapper">
             <button class="form-select-program__button button button--primary" type="submit">Отправить заявку</button>
-            <p class="orm-select-program__legend">* — Обязательные поля</p>
+            <p class="form-select-program__required">* — Обязательные поля</p>
           </div>
         </form>
       </section>
     </main>
     <footer class="main-footer">
-      <section class="main-footer__partnership main-footer__partnership--light-theme partnership">
+      <section class="main-footer__partnership partnership">
         <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="partnership__adress partnership__adress--primary">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
       <div class="main-footer__location">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1710757812708!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Как нас найти."></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1710757812708!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Как нас найти."></iframe>
       </div>
       <div class="main-footer__connection connection">
         <section class="connection__main-page">
