@@ -1,0 +1,33 @@
+@import "./variables.less";
+@import "./fonts.less";
+
+.supplements {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.supplements__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 36px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.supplements__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.supplements__card {
+  &:not(:last-child) {
+    margin-bottom: 31px;
+  }
+
+  &:last-child {
+    margin-bottom: 19px;
+  }
+}
