@@ -1,12 +1,8 @@
-@import "./variables.less";
-@import "./fonts.less";
-
-
 .hero-block__wrapper--has-background {
-  width: 320px;
+  padding: 27px 35px 164px 35px;
   background-color: @green;
-  background-image: url("/source/img/pictures/hero-block-background-mobile.jpg");
-  background-size: 100% auto;
+  background-image: url("../img/pictures/hero-block-background-mobile.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -21,7 +17,7 @@
   color: @black;
 
   &--has-background {
-    padding: 27px 35px 25px 36px;
+    padding-bottom: 25px;
     color: @white;
     text-align: center;
   }
@@ -37,7 +33,6 @@
   text-align: left;
 
   &--has-background {
-    padding-bottom: 164px;
     font-size: 14px;
     line-height: 14px;
     color: @white;
