@@ -1,0 +1,43 @@
+.features {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.features__title {
+  padding-bottom: 40px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.features__item {
+  padding-left: 80px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @specialgrey;
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
+
+  &:last-of-type {
+    padding-bottom: 50px;
+  }
+}
+

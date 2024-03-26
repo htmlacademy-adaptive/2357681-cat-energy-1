@@ -3,21 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo logo--primary" href="index.html">
-        <picture class="logo__picture">
-          <source srcset="img/logos/logo-header-mobile.png" media="(max-width: 320px)">
-          <source srcset="img/logos/logo-header-tablet.png" media="(max-width: 768px)">
-          <source srcset="logo-header-desktop.png" media="(max-width: 1440px)">
-          <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
-        </picture>
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <div class="main-header__wrapper">
+        <a class="main-header__logo logo--primary" href="index.html">
+          <picture class="logo__picture">
+            <source srcset="img/logos/logo-header-mobile.png" media="(max-width: 320px)">
+            <source srcset="img/logos/logo-header-tablet.png" media="(max-width: 768px)">
+            <source srcset="logo-header-desktop.png" media="(max-width: 1440px)">
+            <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
+          </picture>
+        </a>
+        <button class="navigation-toggle" type="button">
           <span class="visually-hidden">Открыть меню навигации.</span>
         </button>
+      </div>
+      <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -39,116 +42,158 @@
         <section class="catalog__basic basic-catalog">
           <h2 class="visually-hidden">Основной каталог.</h2>
           <ul class="basic-catalog__list">
-            <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card-__title">Cat Energy Pro 500 г</h3>
-                <img class="basic-card__image" src="img/pictures/catalog/pro-chicken-500g.png" width="68" height="86" alt="Cat Energy PRO Chicken 500 г">
-                <dl class="basic-card__description card-description-list">
-                  <dt class="card-description-list__parameter">Масса</dt>
-                  <dd class="card-description-list__value">500 г</dd>
-                  <dt class="card-description-list__parameter">Вкус</dt>
-                  <dd class="card-description-list__value">Курица</dd>
-                  <dt class="card-description-list__parameter">Цена</dt>
-                  <dd class="card-description-list__value">700 рублей</dd>
-                </dl>
+                <div class="basic-card__product-wrapper">
+                  <div class="basic-card__image-container">
+                    <img class="basic-card__image" src="img/pictures/catalog/pro-chicken-500g.png" width="68" height="86" alt="Cat Energy PRO Chicken 500 г">
+                  </div>
+                  <div class="basic-card__info-wrapper">
+                    <h3 class="basic-card__title basic-card__title--product">Cat Energy Pro 500 г</h3>
+                    <dl class="basic-card__description card-description-list">
+                      <dt class="card-description-list__parameter">Масса</dt>
+                      <dd class="card-description-list__value">500 г</dd>
+                      <dt class="card-description-list__parameter">Вкус</dt>
+                      <dd class="card-description-list__value">Курица</dd>
+                      <dt class="card-description-list__parameter">Цена</dt>
+                      <dd class="card-description-list__value">700 ₽</dd>
+                    </dl>
+                  </div>
+                </div>
                 <a class="basic-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
-            <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title">Cat Energy Pro 1000 г</h3>
-                <img class="basic-card__image" src="img/pictures/catalog/pro-chicken-1000g.png" width="84" height="100" alt="Cat Energy PRO Chicken 1000 г">
-                <dl class="basic-card__description card-description-list">
-                  <dt class="card-description-list__parameter">Масса</dt>
-                  <dd class="card-description-list__value">1000 г</dd>
-                  <dt class="card-description-list__parameter">Вкус</dt>
-                  <dd class="card-description-list__value">Курица</dd>
-                  <dt class="card-description-list__parameter">Цена</dt>
-                  <dd class="card-description-list__value">1000 рублей</dd>
-                </dl>
+                <div class="basic-card__product-wrapper">
+                  <div class="basic-card__image-container--big">
+                    <img class="basic-card__image" src="img/pictures/catalog/pro-chicken-1000g.png" width="84" height="100" alt="Cat Energy PRO Chicken 1000 г">
+                  </div>
+                  <div class="basic-card__info-wrapper">
+                    <h3 class="basic-card__title basic-card__title--product">Cat Energy Pro 1000 г</h3>
+                    <dl class="basic-card__description card-description-list">
+                      <dt class="card-description-list__parameter">Масса</dt>
+                      <dd class="card-description-list__value">1000 г</dd>
+                      <dt class="card-description-list__parameter">Вкус</dt>
+                      <dd class="card-description-list__value">Курица</dd>
+                      <dt class="card-description-list__parameter">Цена</dt>
+                      <dd class="card-description-list__value">1000 ₽</dd>
+                    </dl>
+                  </div>
+                </div>
                 <a class="basic-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
-            <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title">Cat Energy Pro 500 г</h3>
-                <img class="basic-card__image" src="img/pictures/catalog/pro-fish-500g.png" width="68" height="86" alt="Cat Energy PRO Fish 500 г">
-                <dl class="basic-card__description card-description-list">
-                  <dt class="card-description-list__parameter">Масса</dt>
-                  <dd class="card-description-list__value">500 г</dd>
-                  <dt class="card-description-list__parameter">Вкус</dt>
-                  <dd class="card-description-list__value">Рыба</dd>
-                  <dt class="card-description-list__parameter">Цена</dt>
-                  <dd class="card-description-list__value">700 рублей</dd>
-                </dl>
+                <div class="basic-card__product-wrapper">
+                  <div class="basic-card__image-container">
+                    <img class="basic-card__image" src="img/pictures/catalog/pro-fish-500g.png" width="68" height="86" alt="Cat Energy PRO Fish 500 г">
+                  </div>
+                  <div class="basic-card__info-wrapper">
+                    <h3 class="basic-card__title basic-card__title--product">Cat Energy Pro 500 г</h3>
+                    <dl class="basic-card__description card-description-list">
+                      <dt class="card-description-list__parameter">Масса</dt>
+                      <dd class="card-description-list__value">500 г</dd>
+                      <dt class="card-description-list__parameter">Вкус</dt>
+                      <dd class="card-description-list__value">Рыба</dd>
+                      <dt class="card-description-list__parameter">Цена</dt>
+                      <dd class="card-description-list__value">700 ₽</dd>
+                    </dl>
+                  </div>
+                </div>
                 <a class="basic-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
-            <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title">Cat Energy Pro 1000 г</h3>
-                <img class="basic-card__image" src="img/pictures/catalog/pro-fish-1000g.png" width="84" height="100" alt="Cat Energy PRO Fish 1000 г">
-                <dl class="basic-card__description card-description-list">
-                  <dt class="card-description-list__parameter">Масса</dt>
-                  <dd class="card-description-list__value">1000 г</dd>
-                  <dt class="card-description-list__parameter">Вкус</dt>
-                  <dd class="card-description-list__value">Рыба</dd>
-                  <dt class="card-description-list__parameter">Цена</dt>
-                  <dd class="card-description-list__value">1000 рублей</dd>
-                </dl>
+                <div class="basic-card__product-wrapper">
+                  <div class="basic-card__image-container--big">
+                    <img class="basic-card__image" src="img/pictures/catalog/pro-fish-1000g.png" width="84" height="100" alt="Cat Energy PRO Fish 1000 г">
+                  </div>
+                  <div class="basic-card__info-wrapper">
+                    <h3 class="basic-card__title basic-card__title--product">Cat Energy Pro 1000 г</h3>
+                    <dl class="basic-card__description card-description-list">
+                      <dt class="card-description-list__parameter">Масса</dt>
+                      <dd class="card-description-list__value">1000 г</dd>
+                      <dt class="card-description-list__parameter">Вкус</dt>
+                      <dd class="card-description-list__value">Рыба</dd>
+                      <dt class="card-description-list__parameter">Цена</dt>
+                      <dd class="card-description-list__value">1000 ₽</dd>
+                    </dl>
+                  </div>
+                </div>
                 <a class="basic-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
-            <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title">Cat Energy Slim 500 г</h3>
-                <img class="basic-card__image" src="img/pictures/catalog/slim-buckwheat-500g.png" width="68" height="86" alt="Cat Energy SLIM Buckwheat 500 г">
-                <dl class="basic-card__description card-description-list">
-                  <dt class="card-description-list__parameter">Масса</dt>
-                  <dd class="card-description-list__value">500 г</dd>
-                  <dt class="card-description-list__parameter">Вкус</dt>
-                  <dd class="card-description-list__value">Гречка</dd>
-                  <dt class="card-description-list__parameter">Цена</dt>
-                  <dd class="card-description-list__value">400 рублей</dd>
-                </dl>
+                <div class="basic-card__product-wrapper">
+                  <div class="basic-card__image-container">
+                    <img class="basic-card__image" src="img/pictures/catalog/slim-buckwheat-500g.png" width="68" height="86" alt="Cat Energy SLIM Buckwheat 500 г">
+                  </div>
+                  <div class="basic-card__info-wrapper">
+                    <h3 class="basic-card__title basic-card__title--product">Cat Energy Slim 500 г</h3>
+                    <dl class="basic-card__description card-description-list">
+                      <dt class="card-description-list__parameter">Масса</dt>
+                      <dd class="card-description-list__value">500 г</dd>
+                      <dt class="card-description-list__parameter">Вкус</dt>
+                      <dd class="card-description-list__value">Гречка</dd>
+                      <dt class="card-description-list__parameter">Цена</dt>
+                      <dd class="card-description-list__value">400 ₽</dd>
+                    </dl>
+                  </div>
+                </div>
                 <a class="basic-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
-            <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title">Cat Energy Slim 1000 г</h3>
-                <img class="basic-card__image" src="img/pictures/catalog/slim-buckwheat-1000g.png" width="84" height="100" alt="Cat Energy SLIM Buckwheat 1000 г">
-                <dl class="basic-card__description card-description-list">
-                  <dt class="card-description-list__parameter">Масса</dt>
-                  <dd class="card-description-list__value">1000 г</dd>
-                  <dt class="card-description-list__parameter">Вкус</dt>
-                  <dd class="card-description-list__value">Гречка</dd>
-                  <dt class="card-description-list__parameter">Цена</dt>
-                  <dd class="card-description-list__value">700 рублей</dd>
-                </dl>
+                <div class="basic-card__product-wrapper">
+                  <div class="basic-card__image-container--big">
+                    <img class="basic-card__image" src="img/pictures/catalog/slim-buckwheat-1000g.png" width="84" height="100" alt="Cat Energy SLIM Buckwheat 1000 г">
+                  </div>
+                  <div class="basic-card__info-wrapper">
+                    <h3 class="basic-card__title basic-card__title--product">Cat Energy Slim 1000 г</h3>
+                    <dl class="basic-card__description card-description-list">
+                      <dt class="card-description-list__parameter">Масса</dt>
+                      <dd class="card-description-list__value">1000 г</dd>
+                      <dt class="card-description-list__parameter">Вкус</dt>
+                      <dd class="card-description-list__value">Гречка</dd>
+                      <dt class="card-description-list__parameter">Цена</dt>
+                      <dd class="card-description-list__value">700 ₽</dd>
+                    </dl>
+                  </div>
+                </div>
                 <a class="basic-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
-            <li class="basic-catalog__card basic-catalog__card--with-filling basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title">Cat Energy Slim 500 г</h3>
-                <img class="basic-card__image" src="img/pictures/catalog/slim-rice-500g.png" width="68" height="86" alt="Cat Energy SLIM Rice 500 г">
-                <dl class="basic-card__description card-description-list">
-                  <dt class="card-description-list__parameter">Масса</dt>
-                  <dd class="card-description-list__value">500 г</dd>
-                  <dt class="card-description-list__parameter">Вкус</dt>
-                  <dd class="card-description-list__value">Рис</dd>
-                  <dt class="card-description-list__parameter">Цена</dt>
-                  <dd class="card-description-list__value">500 рублей</dd>
-                </dl>
+                <div class="basic-card__product-wrapper">
+                  <div class="basic-card__image-container">
+                    <img class="basic-card__image" src="img/pictures/catalog/slim-rice-500g.png" width="68" height="86" alt="Cat Energy SLIM Rice 500 г">
+                  </div>
+                  <div class="basic-card__info-wrapper">
+                    <h3 class="basic-card__title basic-card__title--product">Cat Energy Slim 500 г</h3>
+                    <dl class="basic-card__description card-description-list">
+                      <dt class="card-description-list__parameter">Масса</dt>
+                      <dd class="card-description-list__value">500 г</dd>
+                      <dt class="card-description-list__parameter">Вкус</dt>
+                      <dd class="card-description-list__value">Рис</dd>
+                      <dt class="card-description-list__parameter">Цена</dt>
+                      <dd class="card-description-list__value">500 ₽</dd>
+                    </dl>
+                  </div>
+                </div>
                 <a class="basic-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
-            <li class="basic-catalog__card basic-catalog__card--show-more basic-catalog__card--without-background basic-card">
+            <li class="basic-catalog__card basic-card basic-card--show-more">
               <div class="basic-card__wrapper">
-                <h3 class="basic-card__title card-title">Показать еще 100500 товаров</h3>
-                <p class="basic-card__description">На самом деле вкусов гораздо больше!</p>
-                <a class="basic-card__button button button--secondary" href="#">показать все</a>
+                <h3 class="basic-card__title basic-card__title--show-more">Показать еще 100500 товаров</h3>
+                <p class="basic-card__promo">На самом деле вкусов гораздо больше!</p>
+                <a class="basic-card__button--secondary button button--secondary" href="#">показать все</a>
               </div>
             </li>
           </ul>
@@ -158,55 +203,59 @@
           <ul class="supplements__list">
             <li class="supplements__card supplemental-card">
               <div class="supplemental-card__wrapper">
-                <h3 class="supplemental-card__title card-title">Сахарозаменитель</h3>
-                <dl class="supplemental-card__description card-description-list">
-                  <dt class="card-description-list__parameter supplemental-parameter">1 упаковка (100 г)</dt>
-                  <dd class="card-description-list__value supplemental-value">200 ₽</dd>
-                  <a class="supplemental__button button button--primary" href="#">заказать</a>
+                <h3 class="supplemental-card__title">Сахарозаменитель</h3>
+                <dl class="supplemental-card__description">
+                  <dt class="supplemental-card__parameter">1 упаковка (100 г)</dt>
+                  <dd class="supplemental-card__value">200 ₽</dd>
+                </dl>
+                <a class="supplemental-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
             <li class="supplements__card supplemental-card">
               <div class="supplemental-card__wrapper">
-                <h3 class="supplemental-card__title card-title">Питьевая вода</h3>
-                <dl class="supplemental-card__description card-description-list">
-                  <dt class="card-description-list__parameter supplemental-parameter">5 литров</dt>
-                  <dd class="card-description-list__value supplemental-value">50 ₽</dd>
-                  <a class="supplemental__button button button--primary" href="#">заказать</a>
+                <h3 class="supplemental-card__title">Питьевая вода</h3>
+                <dl class="supplemental-card__description">
+                  <dt class="supplemental-card__parameter">5 литров</dt>
+                  <dd class="supplemental-card__value">50 ₽</dd>
+                </dl>
+                <a class="supplemental-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
             <li class="supplements__card supplemental-card">
               <div class="supplemental-card__wrapper">
-                <h3 class="supplemental-card__title card-title">Молоко</h3>
-                <dl class="supplemental-card__description card-description-list">
-                  <dt class="card-description-list__parameter supplemental-parameter">1 литр</dt>
-                  <dd class="card-description-list__value supplemental-value">100 ₽</dd>
-                  <a class="supplemental__button button button--primary" href="#">заказать</a>
+                <h3 class="supplemental-card__title">Молоко</h3>
+                <dl class="supplemental-card__description">
+                  <dt class="supplemental-card__parameter">1 литр</dt>
+                  <dd class="supplemental-card__value">100 ₽</dd>
+                </dl>
+                <a class="supplemental-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
             <li class="supplements__card supplemental-card">
               <div class="supplemental-card__wrapper">
-                <h3 class="supplemental-card__title card-title">Витамины</h3>
-                <dl class="supplemental-card__description card-description-list">
-                  <dt class="card-description-list__parameter supplemental-parameter">1 упаковка (30 г)</dt>
-                  <dd class="card-description-list__value supplemental-value">300 ₽</dd>
-                  <a class="supplemental__button button button--primary" href="#">заказать</a>
+                <h3 class="supplemental-card__title">Витамины</h3>
+                <dl class="supplemental-card__description">
+                  <dt class="supplemental-card__parameter">1 упаковка (30 г)</dt>
+                  <dd class="supplemental-card__value">300 ₽</dd>
+                </dl>
+                <a class="supplemental-card__button button button--primary" href="#">заказать</a>
               </div>
             </li>
           </ul>
         </section>
         <section class="catalog__promotion promotion">
           <h2 class="visually-hidden">Акция.</h2>
-          <p class="promotion__content">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="promotion__content">Закажите все <br> и получите чехол для кота в подарок!</p>
         </section>
       </section>
     </main>
     <footer class="main-footer">
-      <section class="main-footer__partnership main-footer__partnership--light-theme partnership">
+      <section class="main-footer__partnership partnership">
         <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="partnership__adress partnership__adress--primary">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
       <div class="main-footer__location">
-        <iframe src="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9383481,30.3178605,15.25z/data=!4m6!3m5!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474!16s%2Fg%2F11f789hbw0?entry=ttu" width="320px" height="362px" frameborder="0" title="Как нас найти."></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1710757812708!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Как нас найти."></iframe>
       </div>
       <div class="main-footer__connection connection">
         <section class="connection__main-page">
@@ -239,7 +288,7 @@
         </section>
         <section class="connection__copyright copyright">
           <h2 class="visually-hidden">Права на сайт принадлежат HTML Academy.</h2>
-          <a class="copyright__link" href="https://htmlacademy.ru/">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <h3 class="copyright__title">HTML Academy</h3>
             <svg class="copyright__logo" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="#666666" viewBox="0 0 27 35"><path d="M13.64.52 13.5.5 0 1.9v24.61l13.5 7.99L27 26.51V1.91L13.64.5Zm11.6 25L13.5 32.46 1.77 25.52v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V17.4l3.62-2.15v10.26Zm0-11.57L22 15.83l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 14.08l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.8 1.77 12.72V3.49L13.5 2.26 25.23 3.5v9.24Z"/></svg>
           </a>
