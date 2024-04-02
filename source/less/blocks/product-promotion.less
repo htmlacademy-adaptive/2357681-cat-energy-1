@@ -1,6 +1,11 @@
 .product-promotion {
   background-color: @darkgrey;
   padding: 25px 20px 40px 20px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .product-promotion__title {
