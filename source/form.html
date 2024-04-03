@@ -42,43 +42,45 @@
         <h1 class="selection__title">Подбор программы</h1>
         <p class="selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="selection__form form-select-program" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
-            <legend class="form-select-program__legend visually-hidden">Данные кота.</legend>
-            <ul class="form-select-program__list">
-              <li class="form-select-program__item form-select-program__item--to-write">
-                <label for="name">Имя:*</label>
-                <input type="text" name="name" placeholder="Барсик" id="name" required>
-              </li>
-              <li class="form-select-program__item form-select-program__item--to-write">
-                <label for="weight">Вес (кг):*</label>
-                <input type="number" name="weight" placeholder="7" id="weight" min="0" max="30" required>
-              </li>
-              <li class="form-select-program__item form-select-program__item--to-write">
-                <label for="age">Возраст (лет):</label>
-                <input type="number" name="age" placeholder="7" id="age" min="0" max="30">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
-            <legend class="form-select-program__legend visually-hidden">Выбранная программа.</legend>
-            <ul class="form-select-program__list">
-              <li class="form-select-program__item">
-                <input type="radio" name="program" id="slim" value="slim" checked>
-                <label for="slim">Похудение</label>
-              </li>
-              <li class="form-select-program__item">
-                <input type="radio" name="program" id="pro" value="pro">
-                <label for="pro">Набор массы</label>
-              </li>
-              <li class="form-select-program__item">
-                <input type="radio" name="program" id="need-advice" value="need-advice">
-                <label for="need-advice">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form-select-program__cat-and-program-wrapper">
+            <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
+              <legend class="form-select-program__legend visually-hidden">Данные кота.</legend>
+              <ul class="form-select-program__list">
+                <li class="form-select-program__item form-select-program__item--to-write">
+                  <label for="name">Имя:*</label>
+                  <input type="text" name="name" placeholder="Барсик" id="name" required>
+                </li>
+                <li class="form-select-program__item form-select-program__item--to-write">
+                  <label for="weight">Вес (кг):*</label>
+                  <input type="number" name="weight" placeholder="7" id="weight" min="0" max="30" required>
+                </li>
+                <li class="form-select-program__item form-select-program__item--to-write">
+                  <label for="age">Возраст (лет):</label>
+                  <input type="number" name="age" placeholder="7" id="age" min="0" max="30">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
+              <legend class="form-select-program__legend visually-hidden">Выбранная программа.</legend>
+              <ul class="form-select-program__list">
+                <li class="form-select-program__item">
+                  <input type="radio" name="program" id="slim" value="slim" checked>
+                  <label for="slim">Похудение</label>
+                </li>
+                <li class="form-select-program__item">
+                  <input type="radio" name="program" id="pro" value="pro">
+                  <label for="pro">Набор массы</label>
+                </li>
+                <li class="form-select-program__item">
+                  <input type="radio" name="program" id="need-advice" value="need-advice">
+                  <label for="need-advice">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
             <legend class="form-select-program__legend">Контактные данные (владельца кота)</legend>
-            <ul class="form-select-program__list">
+            <ul class="form-select-program__list form-select-program__list--inline">
               <li class="form-select-program__item form-select-program__item--to-write">
                 <label for="email">E-mail:*</label>
                 <input type="email" name="mail" placeholder="kuklachev@gmail.com" required>
@@ -95,7 +97,7 @@
           </div>
           <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
             <legend class="form-select-program__legend">Дополнительно</legend>
-            <ul class="form-select-program__list">
+            <ul class="form-select-program__list form-select-program__list--additional">
               <li class="form-select-program__item">
                 <input type="checkbox" name="sweetener" id="sweetener" checked>
                 <label for="sweetener">Сахарозаменитель</label>
