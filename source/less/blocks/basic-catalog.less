@@ -1,5 +1,27 @@
+.basic-catalog {
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
 .basic-catalog__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+  }
 }

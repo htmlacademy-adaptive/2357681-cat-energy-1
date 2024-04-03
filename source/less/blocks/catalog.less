@@ -11,14 +11,13 @@
   line-height: 36px;
 }
 
-.catalog__basic {
-  width: 320px;
-}
-
-.catalog__supplements {
-  width: 280px;
-}
-
 .catalog__promotion {
   margin: 0 auto 25px auto;
+}
+
+.catalog__supplements-and-promo-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
