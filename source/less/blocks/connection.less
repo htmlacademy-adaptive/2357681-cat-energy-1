@@ -4,6 +4,18 @@
   padding: 40px 20px;
   background-color: @lightgrey;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 55px 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 66px 110px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .connection__main-page {
