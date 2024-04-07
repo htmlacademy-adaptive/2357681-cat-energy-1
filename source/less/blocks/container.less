@@ -1,6 +1,21 @@
 .container {
-  width: 100%;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 768px;
+
+    &--tablet-form {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
