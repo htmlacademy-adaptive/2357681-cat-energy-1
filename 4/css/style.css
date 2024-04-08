@@ -23,10 +23,26 @@
 /*VIEWPORTS*/
 /*FONTS*/
 .container {
-  width: 100%;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 0 auto;
+  width: 320px;
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 768px;
+  }
+  .container--tablet-form {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1220px;
+  }
 }
 .main-header {
   background-color: #ffffff;
@@ -34,14 +50,12 @@
   padding-bottom: 13px;
 }
 @media (min-width: 768px) {
-  .main-header {
+  .main-header__row {
     display: flex;
     justify-content: space-between;
   }
 }
 .main-header__wrapper {
-  width: 280px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -210,12 +224,22 @@
 .features__item:last-of-type {
   padding-bottom: 50px;
 }
-.hero-block__wrapper--has-background {
-  padding: 27px 35px 164px 35px;
-  background-color: #68b738;
+.hero-block--has-background {
+  position: relative;
+  padding: 27px 35px 0 35px;
   background-image: url("../img/pictures/hero-block-background-mobile.jpg");
-  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
+}
+.hero-block--has-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 303px;
+  background: #60a833;
+  z-index: -1;
 }
 .hero-block__title {
   display: block;
@@ -256,16 +280,13 @@
 .main-container {
   flex-grow: 1;
 }
-.main-footer__partnership {
-  background-color: #f2f2f2;
-}
-.main-footer__partnership--light-theme {
-  background-color: #ffffff;
-}
 .main-footer__location {
   background-image: url("../img/pictures/footer-location.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.main-footer__map {
+  display: block;
 }
 .main-nav__wrapper {
   padding-top: 22px;
@@ -291,20 +312,12 @@
   color: #000000;
   text-decoration: none;
 }
+* {
+  box-sizing: border-box;
+}
 .page {
   height: 100%;
-  width: 320px;
   background-color: #ffffff;
-}
-@media (min-width: 768px) {
-  .page {
-    width: 768px;
-  }
-}
-@media (min-width: 1400px) {
-  .page {
-    width: 1440px;
-  }
 }
 .page__body {
   margin: 0;
@@ -316,6 +329,10 @@
   padding: 26px 20px;
   display: flex;
   justify-content: space-between;
+  background-color: #f2f2f2;
+}
+.partnership--light-theme {
+  background-color: #ffffff;
 }
 @media (min-width: 768px) {
   .partnership {
@@ -326,6 +343,7 @@
   .partnership {
     padding: 60px 80px;
     width: 565px;
+    background-color: #ffffff;
   }
 }
 .partnership__title {
@@ -351,7 +369,7 @@
   padding: 25px 20px 40px 20px;
 }
 @media (min-width: 1400px) {
-  .product-promotion {
+  .product-promotion__row {
     display: flex;
     justify-content: space-between;
   }
@@ -368,6 +386,41 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+}
+.section-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+.slider {
+  width: 280px;
+  height: 256px;
+}
+@media (min-width: 768px) {
+  .slider {
+    width: 560px;
+    height: 512px;
+  }
+}
+@media (min-width: 1400px) {
+  .slider {
+    width: 560px;
+    height: 512px;
+  }
+}
+.socials__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 42px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.socials__item:not(:last-child) {
+  padding-right: 24px;
 }
 .stats__wrapper-primary {
   display: flex;
@@ -400,33 +453,6 @@
   color: #444444;
   text-transform: lowercase;
   text-align: center;
-}
-.slider {
-  width: 280px;
-  height: 256px;
-}
-@media (min-width: 768px) {
-  .slider {
-    width: 560px;
-    height: 512px;
-  }
-}
-@media (min-width: 1400px) {
-  .slider {
-    width: 560px;
-    height: 512px;
-  }
-}
-.socials__list {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 42px;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-}
-.socials__item:not(:last-child) {
-  padding-right: 24px;
 }
 .visually-hidden {
   position: absolute;
