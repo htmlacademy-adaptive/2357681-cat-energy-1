@@ -4,9 +4,14 @@
   padding-bottom: 13px;
 }
 
+.main-header__row {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .main-header__wrapper {
-  width: 280px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }

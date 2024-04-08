@@ -1,3 +1,10 @@
+.form-select-program__cat-and-program-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .form-select-program__fieldset {
   padding: 0;
   margin: 0;
@@ -13,10 +20,29 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  &--inline {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--additional {
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 225px 225px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 .form-select-program__item {
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -36,7 +62,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 35px;
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
@@ -54,11 +80,25 @@
 }
 
 .form-select-program__required {
-  font-family: "Lato", sans-serif;
+  font-family: @lato;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+}
+
+.form-select-program__button-wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 285px 285px;
+    column-gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    column-gap: 80px;
+  }
 }
 
 .form-select-program__button {

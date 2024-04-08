@@ -1,12 +1,7 @@
-.features {
-  width: 280px;
-  margin: 0 auto;
-}
-
 .section-title {
   margin: 0;
   padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -22,11 +17,23 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 250px 250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .features__item {
   padding-left: 80px;
-  font-family: "Lato", sans-serif;
+  font-family: @lato;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;

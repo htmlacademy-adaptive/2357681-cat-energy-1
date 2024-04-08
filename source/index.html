@@ -2,114 +2,131 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
-      <div class="main-header__wrapper">
-        <a class="main-header__logo logo--primary" href="index.html">
-          <picture class="logo__picture">
-            <source srcset="img/logos/logo-header-mobile.png" media="(max-width: 320px)">
-            <source srcset="img/logos/logo-header-tablet.png" media="(max-width: 768px)">
-            <source srcset="logo-header-desktop.png" media="(max-width: 1440px)">
-            <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
-          </picture>
-        </a>
-        <button class="navigation-toggle" type="button">
-          <span class="visually-hidden">Открыть меню навигации.</span>
-        </button>
+      <div class="container">
+        <div class="main-header__row">
+          <div class="main-header__wrapper">
+            <a class="main-header__logo logo--primary" href="index.html">
+              <picture class="logo__picture">
+                <source srcset="img/logos/logo-header-mobile.png" media="(max-width: 320px)">
+                <source srcset="img/logos/logo-header-tablet.png" media="(max-width: 768px)">
+                <source srcset="img/logos/logo-header-desktop.png" media="(max-width: 1440px)">
+                <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
+              </picture>
+            </a>
+            <button class="navigation-toggle" type="button">
+              <span class="visually-hidden">Открыть меню навигации.</span>
+            </button>
+          </div>
+          <nav class="main-nav">
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
+    </header>
+    <main class="main-container">
+      <div class="hero-block hero-block--has-background">
+        <div class="container">
+          <div class="hero-block__wrapper">
+            <h1 class="hero-block__title hero-block__title--has-background">Функциональное питание для котов</h1>
+            <p class="hero-block__slogan hero-block__slogan--has-background">Занялся собой? Займись котом!</p>
+          </div>
+          <button class="hero-block__button button button--primary" type="button">Подобрать программу</button>
+        </div>
+      </div>
+      <section class="catalog-preview">
+        <div class="container">
+          <h2 class="visually-hidden">Программы питания</h2>
+          <ul class="catalog-preview__list">
+            <li class="catalog-preview__card catalog-preview__card--slim">
+              <h3 class="catalog-preview__title catalog-preview__title--slim">Похудение</h3>
+              <p class="catalog-preview__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+              </p>
+              <a class="catalog-preview__link" href="#">Каталог slim</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <li class="catalog-preview__card catalog-preview__card--pro">
+              <h3 class="catalog-preview__title catalog-preview__title--pro">Набор массы</h3>
+              <p class="catalog-preview__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+              </p>
+              <a class="catalog-preview__link" href="#">Каталог pro</a>
             </li>
           </ul>
         </div>
-      </nav>
-    </header>
-    <main class="main-container">
-      <div class="hero-block">
-        <div class="hero-block__wrapper--has-background">
-          <h1 class="hero-block__title hero-block__title--has-background">Функциональное питание для котов</h1>
-          <p class="hero-block__slogan hero-block__slogan--has-background">Занялся собой? Займись котом!</p>
-        </div>
-        <button class="hero-block__button button button--primary" type="button">Подобрать программу</button>
-      </div>
-      <section class="catalog-preview">
-        <h2 class="visually-hidden">Программы питания</h2>
-        <ul class="catalog-preview__list">
-          <li class="catalog-preview__card catalog-preview__card--slim">
-            <h3 class="catalog-preview__title catalog-preview__title--slim">Похудение</h3>
-            <p class="catalog-preview__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-            </p>
-            <a class="catalog-preview__link" href="#">Каталог slim</a>
-          </li>
-          <li class="catalog-preview__card catalog-preview__card--pro">
-            <h3 class="catalog-preview__title catalog-preview__title--pro">Набор массы</h3>
-            <p class="catalog-preview__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-            </p>
-            <a class="catalog-preview__link" href="#">Каталог pro</a>
-          </li>
-        </ul>
       </section>
       <section class="features">
-        <h2 class="features__title section-title">Как это работает</h2>
-        <ul class="features__list">
-          <li class="features__item features__item--healthy">
-            Функциональное питание содержит только полезные питательные вещества.
-          </li>
-          <li class="features__item features__item--fast">
-            Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-          </li>
-          <li class="features__item features__item--functional">
-            Замените один-два приема обычной еды на наше функциональное питание.
-          </li>
-          <li class="features__item features__item--result">
-            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="features__title section-title">Как это работает</h2>
+          <ul class="features__list">
+            <li class="features__item features__item--healthy">
+              Функциональное питание содержит только полезные питательные вещества.
+            </li>
+            <li class="features__item features__item--fast">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </li>
+            <li class="features__item features__item--functional">
+              Замените один-два приема обычной еды на наше функциональное питание.
+            </li>
+            <li class="features__item features__item--result">
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="product-promotion">
-        <h2 class="product-promotion__title section-title">Живой пример</h2>
-        <p class="product-promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="product-promotion__stats stats">
-          <div class="stats__wrapper-primary">
-            <div class="stats__item stats__item--primary">
-              <p class="stats__content stats__content--big">5 кг</p>
-              <p class="stats__description">Cнижение веса</p>
+        <div class="container">
+          <div class="product-promotion__row">
+            <div class="product-promotion__wrapper">
+              <h2 class="product-promotion__title section-title">Живой пример</h2>
+              <p class="product-promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+              </p>
+              <div class="product-promotion__stats stats">
+                <div class="stats__wrapper-primary">
+                  <div class="stats__item stats__item--primary">
+                    <p class="stats__content stats__content--big">5 кг</p>
+                    <p class="stats__description">Cнижение веса</p>
+                  </div>
+                  <div class="stats__item stats__item--primary">
+                    <p class="stats__content stats__content--big">60 дней</p>
+                    <p class="stats__description">Затрачено времени</p>
+                  </div>
+                </div>
+                <div class="stats__item stats__item--secondary">
+                  <p class="stats__content stats__content--small">Затраты на питание: 15 000 руб.</p>
+                </div>
+              </div>
             </div>
-            <div class="stats__item stats__item--primary">
-              <p class="stats__content stats__content--big">60 дней</p>
-              <p class="stats__description">Затрачено времени</p>
+            <div class="product-promotion__slider slider">
+              <div class="slider__toggles">
+              </div>
             </div>
-          </div>
-          <div class="stats__item stats__item--secondary">
-            <p class="stats__content stats__content--small">Затраты на питание: 15 000 руб.</p>
-          </div>
-        </div>
-        <div class="product-promotion__slider slider">
-          <div class="slider__toggles">
           </div>
         </div>
       </section>
     </main>
     <footer class="main-footer">
-      <section class="main-footer__partnership main-footer__partnership--light-theme partnership">
+      <section class="main-footer__partnership partnership partnership--light-theme">
         <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="partnership__adress partnership__adress--primary">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
       <div class="main-footer__location">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1710757812708!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Как нас найти."></iframe>
+        <iframe class="main-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1710757812708!5m2!1sru!2sru" width="100%" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Как нас найти."></iframe>
       </div>
       <div class="main-footer__connection connection">
         <section class="connection__main-page">

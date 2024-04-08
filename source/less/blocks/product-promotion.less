@@ -3,6 +3,13 @@
   padding: 25px 20px 40px 20px;
 }
 
+.product-promotion__row {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .product-promotion__title {
   padding-bottom: 40px;
 }
@@ -11,46 +18,10 @@
   padding: 0;
   margin: 0;
   padding-bottom: 35px;
-  font-family: "Lato", sans-serif;
+  font-family: @lato;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @specialgrey;
 }
 
-.stats__wrapper-primary {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-}
-
-.stats__content {
-  padding: 0;
-  margin: 0;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-
-  &--big {
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  &--small {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}
-
-.stats__description {
-  padding: 0;
-  margin: 0;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  color: @specialgrey;
-  text-transform: lowercase;
-  text-align: center;
-}
