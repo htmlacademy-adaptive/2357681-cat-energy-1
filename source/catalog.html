@@ -15,22 +15,22 @@
               <picture class="logo__picture">
                 <source srcset="img/logos/logo-header-mobile.png" media="(max-width: 320px)">
                 <source srcset="img/logos/logo-header-tablet.png" media="(max-width: 768px)">
-                <source srcset="logo-header-desktop.png" media="(max-width: 1440px)">
+                <source srcset="img/logos/logo-header-desktop.png" media="(max-width: 1440px)">
                 <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
               </picture>
             </a>
-            <button class="navigation-toggle" type="button">
+          </div>
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню навигации.</span>
             </button>
-          </div>
-          <nav class="main-nav">
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="index.html">Главная</a>
+                  <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link main-nav__link--current" href="catalog.html">Каталог продукции</a>
+                  <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
                 </li>
                 <li class="main-nav__item">
                   <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -304,5 +304,6 @@
         </section>
       </div>
     </footer>
+    <script src="/source/js/script.js"></script>
   </body>
 </html>
