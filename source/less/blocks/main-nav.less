@@ -74,8 +74,26 @@
 }
 
 .main-nav__item {
+  position: relative;
+
   &:not(:last-child) {
     padding-bottom: 46px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: @middlegrey;
+    left: 0;
+    top: -22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      display: none;
+    }
   }
 }
 
