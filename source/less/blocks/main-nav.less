@@ -4,6 +4,12 @@
   min-height: 65px;
 }
 
+.main-nav--closed .main-nav__wrapper {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
