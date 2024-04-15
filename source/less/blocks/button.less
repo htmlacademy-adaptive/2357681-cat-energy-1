@@ -7,13 +7,32 @@
   border: none;
   cursor: pointer;
 
+  &:disabled {
+    background-color: @specialgrey;
+    opacity: 0.2;
+  }
+
   &--primary {
     color: @white;
     background-color: @green;
   }
 
+  &--primary:hover {
+    background-color: @specialgreen;
+  }
+
+  &--primary:focus {
+    color: @clearwhite;
+    background-color: @specialgreen;
+  }
+
   &--secondary {
     color: @specialgrey;
     background-color: @lightgrey;
+  }
+
+  &---secondary:hover,
+  &--secondary:focus {
+    background-color: @grey;
   }
 }
