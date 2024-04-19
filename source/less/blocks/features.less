@@ -1,5 +1,9 @@
 .features__title {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -12,30 +16,94 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 250px 250px;
+    column-gap: 137px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    grid-template-columns: 230px 246px 248px 250px;
+    column-gap: 83px;
+    margin-bottom: 69px;
   }
 }
 
 .features__item {
-  padding-left: 80px;
   font-family: @lato;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @specialgrey;
+  background-repeat: no-repeat;
 
-  &:not(:last-child) {
-    padding-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  &:last-of-type {
-    padding-bottom: 50px;
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 50px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
+.features__item--healthy {
+  @media (min-width: @tablet-width) {
+    background-image: url(../img/pictures/features-first.svg);
+    background-position: 70%;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-position: 78%;
+  }
+}
+
+.features__item--fast {
+  @media (min-width: @tablet-width) {
+    background-image: url(../img/pictures/features-second.svg);
+    background-position: 90%;
+  }
+}
+
+.features__item--functional {
+  @media (min-width: @tablet-width) {
+    background-image: url(../img/pictures/features-third.svg);
+    background-position: 90%;
+  }
+}
+
+.features__item--result {
+  @media (min-width: @tablet-width) {
+    background-image: url(../img/pictures/features-fourth.svg);
+    background-position: 97%;
+  }
+}
+
+.features__item--result br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.features__description {
+  display: block;
+  margin: 0;
+  padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    padding: 140px 5px 78px 0;
+  }
+}
