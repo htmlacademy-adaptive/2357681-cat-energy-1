@@ -21,6 +21,18 @@
     @media (min-width: @tablet-width) {
       content: none;
     }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 694px;
+      left: 50%;
+      top: -90px;
+      background-image: url(../img/pictures/hero-block-background-desktop.png);
+      background-size: 720px auto;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -28,6 +40,18 @@
   @media (min-width: @tablet-width) {
     margin-left: 90px;
     margin-right: 204px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 90px;
+    margin-right: 200px;
+    margin-bottom: 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 68px;
+    margin-right: 675px;
+    padding-bottom: 266px;
   }
 }
 
