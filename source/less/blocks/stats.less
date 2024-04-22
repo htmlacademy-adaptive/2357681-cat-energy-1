@@ -2,9 +2,21 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 48%;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 95%;
+    padding-left: 35px;
+    padding-bottom: 55px;
+  }
 }
 
 .stats__content {
+  display: block;
   padding: 0;
   margin: 0;
   font-family: @oswald;
@@ -15,11 +27,22 @@
   &--big {
     font-size: 24px;
     line-height: 24px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+      line-height: 37px;
+    }
   }
 
   &--small {
     font-size: 14px;
     line-height: 20px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: right;
+    }
   }
 }
 
@@ -33,4 +56,17 @@
   color: @specialgrey;
   text-transform: lowercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.stats__item--secondary {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
 }
