@@ -1,11 +1,17 @@
 .supplements__title {
   margin: 0;
+  margin-bottom: 36px;
   padding: 0;
-  padding-bottom: 36px;
   font-family: @oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 80px;
+  }
 }
 
 .supplements__list {
@@ -17,9 +23,13 @@
 .supplements__card {
   &:not(:last-child) {
     margin-bottom: 31px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 54px;
+    }
   }
 
   &:last-child {
-    margin-bottom: 19px;
+    margin-bottom: 98px;
   }
 }
