@@ -1,14 +1,16 @@
-.catalog {
-  margin: 0 auto;
-}
-
 .catalog__title {
   padding: 0;
-  margin: 27px 42px 40px 20px;
+  margin: 27px 22px 40px 0;
   font-family: @oswald;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 65px 270px 24px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .catalog__promotion {
