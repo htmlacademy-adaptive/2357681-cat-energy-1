@@ -1,6 +1,7 @@
 .supplements__title {
   position: relative;
   margin: 0;
+  margin-top: 25px;
   margin-bottom: 36px;
   padding: 0;
   font-family: @oswald;
@@ -45,21 +46,73 @@
 }
 
 .supplements__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.supplements__card {
-  &:not(:last-child) {
-    margin-bottom: 31px;
+.supplements__list::before {
+  position: absolute;
 
-    @media (min-width: @tablet-width) {
-      margin-bottom: 54px;
-    }
+  @media (min-width: @tablet-width) {
+    content: "";
+    height: 1px;
+    width: 80%;
+    left: -40%;
+    top: 50%;
+    background-color: @grey;
+    transform: rotate(90deg);
   }
+}
 
-  &:last-child {
-    margin-bottom: 98px;
+.supplements__list::after {
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    height: 1px;
+    width: 80%;
+    right: -40%;
+    top: 50%;
+    background-color: @grey;
+    transform: rotate(90deg);
+  }
+}
+
+.supplements__card {
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px 38px;
+  }
+}
+
+.supplements__card::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  top: 0;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+  }
+}
+
+.supplements__card:last-child::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    left: 0;
   }
 }
