@@ -25,11 +25,22 @@
     margin-top: 70px;
     margin-bottom: 75px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 192px;
+    margin-bottom: 0;
+  }
 }
 
 .catalog__supplements-and-promo-wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 87px;
+  }
+}
+
+.catalog__supplements {
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
