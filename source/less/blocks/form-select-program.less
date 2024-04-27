@@ -50,12 +50,16 @@
   color: @specialgrey;
 
   &:not(:last-child) {
-    padding-bottom: 14px;
-  }
+    padding-bottom: 19px;
 
-  &--to-write input {
-    padding: 14px;
+    @media (min-width: @tablet-width) {
+      padding-bottom: 37px;
+    }
   }
+}
+
+.form-select-program__item--to-write input {
+  padding: 14px;
 }
 
 .form-select-program__legend {
@@ -85,6 +89,92 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+}
+
+.form-select-program__control {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  cursor: pointer;
+}
+
+.form-select-program__input[type="checkbox"]:checked + .form-select-program__mark--checkbox::after {
+  position: absolute;
+  content: url(../img/icons/form/checkbox-tick-mobile.svg);
+  width: 18px;
+  height: 14px;
+  top: 25%;
+  left: 25%;
+
+  @media (min-width: @tablet-width) {
+    content: url(../img/icons/form/checkbox-tick-tablet-desktop.svg);
+    width: 24px;
+    height: 19px;
+  }
+}
+
+.form-select-program__input[type="radio"]:checked + .form-select-program__mark--radio::after {
+  position: absolute;
+  content: url(../img/icons/form/radio-tick-mobile.svg);
+  width: 13px;
+  height: 13px;
+  top: 20%;
+  left: 24%;
+
+  @media (min-width: @tablet-width) {
+    content: url(../img/icons/form/radio-tick-tablet-desktop.svg);
+    width: 18px;
+    height: 18px;
+    top: 25%;
+    left: 27%;
+  }
+}
+
+.form-select-program__mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  bottom: -5px;
+}
+
+.form-select-program__mark--radio {
+  content: "";
+  width: 29px;
+  height: 29px;
+  border: 1px solid @darkbeige;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+.form-select-program__mark--checkbox {
+  content: "";
+  width: 29px;
+  height: 29px;
+  border: 1px solid @darkbeige;
+
+  @media (min-width: @tablet-width) {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+.form-select-program__input:hover + .form-select-program__mark {
+  border: 1px solid @brightbeige;
+}
+
+.form-select-program__input:disabled + .form-select-program__mark + .form-select-program__label {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.form-select-program__input:disabled:hover + .form-select-program__mark {
+  border: 1px solid @darkbeige;
+  cursor: default;
 }
 
 .form-select-program__button-wrapper {

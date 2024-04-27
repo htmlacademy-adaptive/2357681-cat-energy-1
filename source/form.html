@@ -68,17 +68,26 @@
               <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
                 <legend class="form-select-program__legend visually-hidden">Выбранная программа.</legend>
                 <ul class="form-select-program__list">
-                  <li class="form-select-program__item">
-                    <input type="radio" name="program" id="slim" value="slim" checked>
-                    <label for="slim">Похудение</label>
+                  <li class="form-select-program__item form-select-program__item--to-check">
+                    <label class="form-select-program__control">
+                      <input class="visually-hidden form-select-program__input" type="radio" name="program" id="slim" value="slim" checked>
+                      <span class="form-select-program__mark form-select-program__mark--radio"></span>
+                      <span class="form-select-program__label">Похудение</span>
+                    </label>
                   </li>
-                  <li class="form-select-program__item">
-                    <input type="radio" name="program" id="pro" value="pro">
-                    <label for="pro">Набор массы</label>
+                  <li class="form-select-program__item form-select-program__item--to-check">
+                    <label class="form-select-program__control">
+                      <input class="visually-hidden form-select-program__input" type="radio" name="program" id="pro" value="pro">
+                      <span class="form-select-program__mark form-select-program__mark--radio"></span>
+                      <span class="form-select-program__label">Набор массы</span>
+                    </label>
                   </li>
-                  <li class="form-select-program__item">
-                    <input type="radio" name="program" id="need-advice" value="need-advice">
-                    <label for="need-advice">Не знаю (нужен ваш совет)</label>
+                  <li class="form-select-program__item form-select-program__item--to-check">
+                    <label class="form-select-program__control">
+                      <input class="visually-hidden form-select-program__input" type="radio" name="program" id="need-advice" value="need-advice">
+                      <span class="form-select-program__mark form-select-program__mark--radio"></span>
+                      <span class="form-select-program__label">Не знаю (нужен ваш совет)</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -103,21 +112,33 @@
             <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
               <legend class="form-select-program__legend">Дополнительно</legend>
               <ul class="form-select-program__list form-select-program__list--additional">
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="sweetener" id="sweetener" checked>
-                  <label for="sweetener">Сахарозаменитель</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Сахарозаменитель</span>
+                  </label>
                 </li>
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="water" id="water">
-                  <label for="water">Питьевая вода</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="water" id="water">
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Питьевая вода</span>
+                  </label>
                 </li>
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="milk" id="milk">
-                  <label for="milk">Молоко</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="milk" id="milk">
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Молоко</span>
+                  </label>
                 </li>
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="vitamins" id="vitamins">
-                  <label for="vitamins">Витамины</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="vitamins" id="vitamins">
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Витамины</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
