@@ -1,7 +1,8 @@
 .form-select-program__cat-and-program-wrapper {
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 570px);
+    column-gap: 80px;
   }
 }
 
@@ -59,8 +60,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(2, 572px);
+      column-gap: 78px;
     }
   }
 
@@ -73,8 +75,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(4,221px);
+      column-gap: 60px;
     }
   }
 
@@ -83,6 +86,11 @@
       margin-top: 7px;
       padding: 23px 310px 27px 27px;
       border: 1px solid @brightgrey;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+      padding: 25px 251px 30px 28px;
     }
   }
 }
@@ -112,6 +120,45 @@
 .form-select-program__item--to-write {
   display: flex;
   align-items: baseline;
+  position: relative;
+}
+
+.form-select-program__item--email::after {
+  position: absolute;
+  display: block;
+  content: url(../img/icons/form/form-email.svg);
+  width: 17px;
+  height: 13px;
+  top: 13px;
+  left: 250px;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 635px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 540px;
+  }
+}
+
+.form-select-program__item--phone::after {
+  position: absolute;
+  display: block;
+  content: url(../img/icons/form/form-phone.svg);
+  width: 15px;
+  height: 15px;
+  top: 13px;
+  left: 250px;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 635px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 540px;
+  }
 }
 
 .form-select-program__item--to-write input {
@@ -209,6 +256,10 @@
     padding: 11px 295px 134px 20px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 2px;
   }
 }
 
@@ -324,7 +375,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 570px 570px;
+    grid-template-columns: 570px 175px;
     column-gap: 80px;
   }
 }
