@@ -49,14 +49,14 @@
           <form class="selection__form form-select-program" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form-select-program__cat-and-program-wrapper">
               <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
-                <legend class="form-select-program__legend visually-hidden">Данные кота.</legend>
+                <legend class="visually-hidden">Данные кота.</legend>
                 <ul class="form-select-program__list">
                   <li class="form-select-program__item form-select-program__item--to-write">
-                    <label for="name">Имя:*</label>
+                    <label for="name">Имя:<sup>*</sup></label>
                     <input type="text" name="name" placeholder="Барсик" id="name" required>
                   </li>
                   <li class="form-select-program__item form-select-program__item--to-write">
-                    <label for="weight">Вес (кг):*</label>
+                    <label for="weight">Вес (кг):<sup>*</sup></label>
                     <input type="number" name="weight" placeholder="7" id="weight" min="0" max="30" required>
                   </li>
                   <li class="form-select-program__item form-select-program__item--to-write">
@@ -66,8 +66,8 @@
                 </ul>
               </fieldset>
               <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
-                <legend class="form-select-program__legend visually-hidden">Выбранная программа.</legend>
-                <ul class="form-select-program__list">
+                <legend class="visually-hidden">Выбранная программа.</legend>
+                <ul class="form-select-program__list form-select-program__list--with-border">
                   <li class="form-select-program__item form-select-program__item--to-check">
                     <label class="form-select-program__control">
                       <input class="visually-hidden form-select-program__input" type="radio" name="program" id="slim" value="slim" checked>
@@ -96,21 +96,21 @@
               <legend class="form-select-program__legend">Контактные данные (владельца кота)</legend>
               <ul class="form-select-program__list form-select-program__list--inline">
                 <li class="form-select-program__item form-select-program__item--to-write">
-                  <label for="email">E-mail:*</label>
+                  <label for="email">E-mail:<sup>*</sup></label>
                   <input type="email" name="mail" placeholder="kuklachev@gmail.com" required>
                 </li>
                 <li class="form-select-program__item form-select-program__item--to-write">
-                <label for="number">Телефон:*</label>
+                <label for="number">Телефон:<sup>*</sup></label>
                 <input type="tel" name="phone" placeholder="8 (960) 900-60-90" id="number" maxlength="21" required>
                 </li>
               </ul>
             </fieldset>
             <div class="form-select-program__textfield">
-              <label class="form-select-program__legend" for="message">Комментарий</label>
+              <label class="form-select-program__legend form-select-program__legend--comment" for="message">Комментарий</label>
               <textarea class="form-select-program__textarea" name="comment" placeholder="Расскажите обо всех повадках кота" id="message"></textarea>
             </div>
-            <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
-              <legend class="form-select-program__legend">Дополнительно</legend>
+            <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title form-select-program__fieldset--additional">
+              <legend class="form-select-program__legend form-select-program__legend--additional">Дополнительно</legend>
               <ul class="form-select-program__list form-select-program__list--additional">
                 <li class="form-select-program__item form-select-program__item--to-check">
                   <label class="form-select-program__control">
@@ -144,7 +144,7 @@
             </fieldset>
             <div class="form-select-program__button-wrapper">
               <button class="form-select-program__button button button--primary" type="submit">Отправить заявку</button>
-              <p class="form-select-program__required">* — Обязательные поля</p>
+              <p class="form-select-program__required"><sup>*</sup> — Обязательные поля</p>
             </div>
           </form>
         </section>

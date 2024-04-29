@@ -11,8 +11,40 @@
   margin-bottom: 45px;
   border: none;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
   &--with-title {
     margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 65px;
+    }
+  }
+
+  &--additional {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.form-select-program__fieldset--without-title {
+  position: relative;
+}
+
+.form-select-program__fieldset--without-title::after {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 1px;
+  background-color: @beige;
+  bottom: -24px;
+  left: -8%;
+
+  @media (min-width: @tablet-width) {
+    content: none;
   }
 }
 
@@ -22,6 +54,10 @@
   list-style-type: none;
 
   &--inline {
+    @media (min-width: @tablet-width) {
+      margin-left: 40px;
+    }
+
     @media (min-width: @desktop-width) {
       display: flex;
       justify-content: space-between;
@@ -32,11 +68,21 @@
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 225px 225px;
+      column-gap: 83px;
+      margin-left: 40px;
     }
 
     @media (min-width: @desktop-width) {
       display: flex;
       justify-content: space-between;
+    }
+  }
+
+  &--with-border {
+    @media (min-width: @tablet-width) {
+      margin-top: 7px;
+      padding: 23px 310px 27px 27px;
+      border: 1px solid @brightgrey;
     }
   }
 }
@@ -63,22 +109,76 @@
   }
 }
 
+.form-select-program__item--to-write {
+  display: flex;
+  align-items: baseline;
+}
+
 .form-select-program__item--to-write input {
-  padding: 14px;
+  flex-grow: 1;
+  padding: 14px 0 13px 15px;
+  font-family: @oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @specialgrey;
+  text-transform: uppercase;
+  border: 1px solid @brightgrey;
+}
+
+.form-select-program__item--to-write label {
+  margin-right: 13px;
 }
 
 .form-select-program__legend {
+  position: relative;
+  display: block;
   margin: 0;
   padding: 0;
+  padding-right: 20px;
   margin-bottom: 35px;
   font-family: @oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    padding: 0 40px 0 40px;
+    margin-bottom: 76px;
+  }
+
+  &--comment {
+    @media (min-width: @tablet-width) {
+      margin-right: 450px;
+    }
+  }
+
+  &--additional {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 57px;
+    }
+  }
+}
+
+.form-select-program__legend::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100vw;
+  top: 60%;
+  left: 20%;
+  background-color: @green;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    left: -21%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -25%;
   }
 }
 
@@ -86,11 +186,30 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .form-select-program__textarea {
   padding: 14px;
   padding-bottom: 118px;
+  font-family: @oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @specialgrey;
+  text-transform: uppercase;
+  border: 1px solid @brightgrey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 11px;
+    margin-left: 40px;
+    padding: 11px 295px 134px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form-select-program__required {
@@ -99,6 +218,11 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .form-select-program__control {
@@ -106,6 +230,10 @@
   display: block;
   padding-left: 45px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 52px;
+  }
 }
 
 .form-select-program__input[type="checkbox"]:checked + .form-select-program__mark--checkbox::after {
@@ -190,7 +318,7 @@
 .form-select-program__button-wrapper {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 285px 285px;
+    grid-template-columns: 285px 175px;
     column-gap: 60px;
   }
 
@@ -204,4 +332,11 @@
 .form-select-program__button {
   padding: 10px 78px;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 65px;
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
