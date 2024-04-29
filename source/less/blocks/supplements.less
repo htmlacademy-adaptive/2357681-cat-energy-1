@@ -1,5 +1,6 @@
 .supplements__title {
   position: relative;
+  display: block;
   margin: 0;
   margin-top: 25px;
   margin-bottom: 36px;
@@ -8,11 +9,13 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin: 70px 329px 80px 40px;
+    padding: 0 40px 0 40px;
+    margin: 70px 245px 80px 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,10 +31,11 @@
   @media (min-width: @tablet-width) {
     content: "";
     height: 2px;
-    width: 8%;
+    width: 100vw;
     top: 60%;
     left: -21%;
     background-color: @green;
+    z-index: -1;
   }
 
   @media (min-width: @desktop-width) {
@@ -40,7 +44,7 @@
   }
 }
 
-.supplements__title::after {
+/*.supplements__title::after {
   position: absolute;
   content: "";
   height: 2px;
@@ -58,7 +62,7 @@
       left: 60%;
     }
   }
-}
+}*/
 
 .supplements__list {
   position: relative;
