@@ -111,19 +111,13 @@
 }
 
 .catalog-preview__link::after {
-  content: url(../img/icons/arrow-catalog-preview.svg);
+  content: url("<svg xmlns="http://www.w3.org/2000/svg" width="24" height="12" fill="#000000" viewBox="0 0 24 12"><path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2V.8L24 6Z"/></svg>");
   position: absolute;
   left: 98px;
 
   @media (min-width: @tablet-width) {
     left: 133px;
   }
-}
-
-.catalog-preview__link:hover .catalog-preview__link::after {
-  content: url(../img/icons/arrow-catalog-preview-hover.svg);
-  position: absolute;
-  left: 98px;
 }
 
 .catalog-preview__link:focus {
