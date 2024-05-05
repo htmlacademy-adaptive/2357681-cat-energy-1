@@ -179,7 +179,7 @@
 
 .form-select-program__legend {
   position: relative;
-  display: block;
+  display: inline-block;
   margin: 0;
   padding: 0;
   padding-right: 20px;
@@ -210,23 +210,29 @@
   }
 }
 
-.form-select-program__legend::before {
+.form-select-program__legend::before,
+.form-select-program__legend::after {
   position: absolute;
   content: "";
   height: 2px;
   width: 100vw;
-  top: 60%;
-  left: 20%;
+  top: 50%;
+  margin-top: 2px;
   background-color: @green;
   z-index: -1;
+}
+
+.form-select-program__legend::before {
+  right: 0;
+  content: none;
 
   @media (min-width: @tablet-width) {
-    left: -21%;
+    content: "";
   }
+}
 
-  @media (min-width: @desktop-width) {
-    left: -25%;
-  }
+.form-select-program__legend::after {
+  left: 20px;
 }
 
 .form-select-program__textfield {
