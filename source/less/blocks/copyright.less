@@ -1,6 +1,6 @@
 .copyright__link {
   display: flex;
-  justify-content: center;
+  align-items: center;
   margin: 0;
   text-decoration: none;
   font-family: @lato;
@@ -18,6 +18,10 @@
   font-size: 16px;
   line-height: 20px;
   color: @specialgrey;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 23px;
+  }
 }
 
 .copyright__logo {

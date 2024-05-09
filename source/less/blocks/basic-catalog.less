@@ -11,5 +11,39 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+}
+
+.basic-catalog__card {
+  position: relative;
+}
+
+.basic-catalog__card::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 114%;
+  top: 0;
+  left: -7%;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
+
+.basic-catalog__card:last-child::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 114%;
+  bottom: 0;
+  left: -7%;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    content: none;
   }
 }

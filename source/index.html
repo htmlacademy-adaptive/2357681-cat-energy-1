@@ -19,15 +19,15 @@
                 <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
               </picture>
             </a>
-            <button class="navigation-toggle" type="button">
+          </div>
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню навигации.</span>
             </button>
-          </div>
-          <nav class="main-nav">
             <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
+              <ul class="main-nav__list main-nav__list--has-background">
                 <li class="main-nav__item">
-                  <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
+                  <a class="main-nav__link main-nav__link--current main-nav__link--current-has-background" href="index.html">Главная</a>
                 </li>
                 <li class="main-nav__item">
                   <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -42,13 +42,15 @@
       </div>
     </header>
     <main class="main-container">
-      <div class="hero-block hero-block--has-background">
+      <div class="hero-block">
         <div class="container">
           <div class="hero-block__wrapper">
-            <h1 class="hero-block__title hero-block__title--has-background">Функциональное питание для котов</h1>
-            <p class="hero-block__slogan hero-block__slogan--has-background">Занялся собой? Займись котом!</p>
+            <div class="hero-block__text-wrapper">
+              <h1 class="hero-block__title">Функциональное питание для котов</h1>
+              <p class="hero-block__slogan">Занялся собой? Займись котом!</p>
+            </div>
+            <button class="hero-block__button button button--primary" type="button">Подобрать программу</button>
           </div>
-          <button class="hero-block__button button button--primary" type="button">Подобрать программу</button>
         </div>
       </div>
       <section class="catalog-preview">
@@ -56,16 +58,24 @@
           <h2 class="visually-hidden">Программы питания</h2>
           <ul class="catalog-preview__list">
             <li class="catalog-preview__card catalog-preview__card--slim">
-              <h3 class="catalog-preview__title catalog-preview__title--slim">Похудение</h3>
-              <p class="catalog-preview__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-              </p>
-              <a class="catalog-preview__link" href="#">Каталог slim</a>
+              <div class="catalog-preview__text-wrapper">
+                <h3 class="catalog-preview__title">Похудение</h3>
+                <p class="catalog-preview__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+                </p>
+                <a class="catalog-preview__link" href="#">Каталог slim
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="12" fill="#000000" viewBox="0 0 24 12"><path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2V.8L24 6Z"/></svg>
+                </a>
+              </div>
             </li>
             <li class="catalog-preview__card catalog-preview__card--pro">
-              <h3 class="catalog-preview__title catalog-preview__title--pro">Набор массы</h3>
-              <p class="catalog-preview__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-              </p>
-              <a class="catalog-preview__link" href="#">Каталог pro</a>
+              <div class="catalog-preview__text-wrapper">
+                <h3 class="catalog-preview__title">Набор массы</h3>
+                <p class="catalog-preview__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+                </p>
+                <a class="catalog-preview__link" href="#">Каталог pro
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="12" fill="#000000" viewBox="0 0 24 12"><path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2V.8L24 6Z"/></svg>
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -75,16 +85,16 @@
           <h2 class="features__title section-title">Как это работает</h2>
           <ul class="features__list">
             <li class="features__item features__item--healthy">
-              Функциональное питание содержит только полезные питательные вещества.
+              <p class="features__description">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
             <li class="features__item features__item--fast">
-              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+              <p class="features__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
             <li class="features__item features__item--functional">
-              Замените один-два приема обычной еды на наше функциональное питание.
+              <p class="features__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
             <li class="features__item features__item--result">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+              <p class="features__description">Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!</p>
             </li>
           </ul>
         </div>
@@ -108,7 +118,8 @@
                   </div>
                 </div>
                 <div class="stats__item stats__item--secondary">
-                  <p class="stats__content stats__content--small">Затраты на питание: 15 000 руб.</p>
+                  <p class="stats__content stats__content--small">Затраты на питание:</p>
+                  <p class="stats__content stats__content--small">15 000 руб.</p>
                 </div>
               </div>
             </div>
@@ -122,11 +133,11 @@
     </main>
     <footer class="main-footer">
       <section class="main-footer__partnership partnership partnership--light-theme">
-        <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="partnership__adress partnership__adress--primary">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <h2 class="partnership__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+        <p class="partnership__adress partnership__adress--primary">ул. Большая Конюшенная, д. 19/8 <br> <br> Санкт-Петербург</p>
       </section>
       <div class="main-footer__location">
-        <iframe class="main-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1710757812708!5m2!1sru!2sru" width="100%" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Как нас найти."></iframe>
+        <iframe class="main-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1710757812708!5m2!1sru!2sru" width="100%" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
       </div>
       <div class="main-footer__connection connection">
         <section class="connection__main-page">
@@ -166,5 +177,6 @@
         </section>
       </div>
     </footer>
+    <script src="/source/js/script.js"></script>
   </body>
 </html>

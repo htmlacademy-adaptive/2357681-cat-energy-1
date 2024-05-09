@@ -15,15 +15,15 @@
               <picture class="logo__picture">
                 <source srcset="img/logos/logo-header-mobile.png" media="(max-width: 320px)">
                 <source srcset="img/logos/logo-header-tablet.png" media="(max-width: 768px)">
-                <source srcset="logo-header-desktop.png" media="(max-width: 1440px)">
+                <source srcset="img/logos/logo-header-desktop.png" media="(max-width: 1440px)">
                 <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
               </picture>
             </a>
-            <button class="navigation-toggle" type="button">
+          </div>
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню навигации.</span>
             </button>
-          </div>
-          <nav class="main-nav">
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
@@ -49,7 +49,7 @@
             <h2 class="visually-hidden">Основной каталог.</h2>
             <ul class="basic-catalog__list">
               <li class="basic-catalog__card basic-card">
-                <div class="basic-card__wrapper">
+                <div class="basic-card__wrapper basic-card__wrapper--product">
                   <div class="basic-card__product-wrapper">
                     <div class="basic-card__image-container">
                       <img class="basic-card__image" src="img/pictures/catalog/pro-chicken-500g.png" width="68" height="86" alt="Cat Energy PRO Chicken 500 г">
@@ -70,7 +70,7 @@
                 </div>
               </li>
               <li class="basic-catalog__card basic-card">
-                <div class="basic-card__wrapper">
+                <div class="basic-card__wrapper basic-card__wrapper--product">
                   <div class="basic-card__product-wrapper">
                     <div class="basic-card__image-container--big">
                       <img class="basic-card__image" src="img/pictures/catalog/pro-chicken-1000g.png" width="84" height="100" alt="Cat Energy PRO Chicken 1000 г">
@@ -91,7 +91,7 @@
                 </div>
               </li>
               <li class="basic-catalog__card basic-card">
-                <div class="basic-card__wrapper">
+                <div class="basic-card__wrapper basic-card__wrapper--product">
                   <div class="basic-card__product-wrapper">
                     <div class="basic-card__image-container">
                       <img class="basic-card__image" src="img/pictures/catalog/pro-fish-500g.png" width="68" height="86" alt="Cat Energy PRO Fish 500 г">
@@ -112,7 +112,7 @@
                 </div>
               </li>
               <li class="basic-catalog__card basic-card">
-                <div class="basic-card__wrapper">
+                <div class="basic-card__wrapper basic-card__wrapper--product">
                   <div class="basic-card__product-wrapper">
                     <div class="basic-card__image-container--big">
                       <img class="basic-card__image" src="img/pictures/catalog/pro-fish-1000g.png" width="84" height="100" alt="Cat Energy PRO Fish 1000 г">
@@ -133,7 +133,7 @@
                 </div>
               </li>
               <li class="basic-catalog__card basic-card">
-                <div class="basic-card__wrapper">
+                <div class="basic-card__wrapper basic-card__wrapper--product">
                   <div class="basic-card__product-wrapper">
                     <div class="basic-card__image-container">
                       <img class="basic-card__image" src="img/pictures/catalog/slim-buckwheat-500g.png" width="68" height="86" alt="Cat Energy SLIM Buckwheat 500 г">
@@ -154,7 +154,7 @@
                 </div>
               </li>
               <li class="basic-catalog__card basic-card">
-                <div class="basic-card__wrapper">
+                <div class="basic-card__wrapper basic-card__wrapper--product">
                   <div class="basic-card__product-wrapper">
                     <div class="basic-card__image-container--big">
                       <img class="basic-card__image" src="img/pictures/catalog/slim-buckwheat-1000g.png" width="84" height="100" alt="Cat Energy SLIM Buckwheat 1000 г">
@@ -175,7 +175,7 @@
                 </div>
               </li>
               <li class="basic-catalog__card basic-card">
-                <div class="basic-card__wrapper">
+                <div class="basic-card__wrapper basic-card__wrapper--product">
                   <div class="basic-card__product-wrapper">
                     <div class="basic-card__image-container">
                       <img class="basic-card__image" src="img/pictures/catalog/slim-rice-500g.png" width="68" height="86" alt="Cat Energy SLIM Rice 500 г">
@@ -196,8 +196,8 @@
                 </div>
               </li>
               <li class="basic-catalog__card basic-card basic-card--show-more">
-                <div class="basic-card__wrapper">
-                  <h3 class="basic-card__title basic-card__title--show-more">Показать еще 100500 товаров</h3>
+                <div class="basic-card__wrapper basic-card__wrapper--show-more">
+                  <h3 class="basic-card__title basic-card__title--show-more">Показать еще<br> 100500 товаров</h3>
                   <p class="basic-card__promo">На самом деле вкусов гораздо больше!</p>
                   <a class="basic-card__button--secondary button button--secondary" href="#">показать все</a>
                 </div>
@@ -210,41 +210,49 @@
               <ul class="supplements__list">
                 <li class="supplements__card supplemental-card">
                   <div class="supplemental-card__wrapper">
-                    <h3 class="supplemental-card__title">Сахарозаменитель</h3>
-                    <dl class="supplemental-card__description">
-                      <dt class="supplemental-card__parameter">1 упаковка (100 г)</dt>
-                      <dd class="supplemental-card__value">200 ₽</dd>
-                    </dl>
+                    <div class="supplemental-card__text-wrapper">
+                      <h3 class="supplemental-card__title">Сахарозаменитель</h3>
+                      <dl class="supplemental-card__description">
+                        <dt class="supplemental-card__parameter">1 упаковка (100 г)</dt>
+                        <dd class="supplemental-card__value">200 ₽</dd>
+                      </dl>
+                    </div>
                     <a class="supplemental-card__button button button--primary" href="#">заказать</a>
                   </div>
                 </li>
                 <li class="supplements__card supplemental-card">
                   <div class="supplemental-card__wrapper">
-                    <h3 class="supplemental-card__title">Питьевая вода</h3>
-                    <dl class="supplemental-card__description">
-                      <dt class="supplemental-card__parameter">5 литров</dt>
-                      <dd class="supplemental-card__value">50 ₽</dd>
-                    </dl>
+                    <div class="supplemental-card__text-wrapper">
+                      <h3 class="supplemental-card__title">Питьевая вода</h3>
+                      <dl class="supplemental-card__description">
+                        <dt class="supplemental-card__parameter">5 литров</dt>
+                        <dd class="supplemental-card__value">50 ₽</dd>
+                      </dl>
+                    </div>
                     <a class="supplemental-card__button button button--primary" href="#">заказать</a>
                   </div>
                 </li>
                 <li class="supplements__card supplemental-card">
                   <div class="supplemental-card__wrapper">
-                    <h3 class="supplemental-card__title">Молоко</h3>
-                    <dl class="supplemental-card__description">
-                      <dt class="supplemental-card__parameter">1 литр</dt>
-                      <dd class="supplemental-card__value">100 ₽</dd>
-                    </dl>
+                    <div class="supplemental-card__text-wrapper">
+                      <h3 class="supplemental-card__title">Молоко</h3>
+                      <dl class="supplemental-card__description">
+                        <dt class="supplemental-card__parameter">1 литр</dt>
+                        <dd class="supplemental-card__value">100 ₽</dd>
+                      </dl>
+                    </div>
                     <a class="supplemental-card__button button button--primary" href="#">заказать</a>
                   </div>
                 </li>
                 <li class="supplements__card supplemental-card">
                   <div class="supplemental-card__wrapper">
-                    <h3 class="supplemental-card__title">Витамины</h3>
-                    <dl class="supplemental-card__description">
-                      <dt class="supplemental-card__parameter">1 упаковка (30 г)</dt>
-                      <dd class="supplemental-card__value">300 ₽</dd>
-                    </dl>
+                    <div class="supplemental-card__text-wrapper">
+                      <h3 class="supplemental-card__title">Витамины</h3>
+                      <dl class="supplemental-card__description">
+                        <dt class="supplemental-card__parameter">1 упаковка (30 г)</dt>
+                        <dd class="supplemental-card__value">300 ₽</dd>
+                      </dl>
+                    </div>
                     <a class="supplemental-card__button button button--primary" href="#">заказать</a>
                   </div>
                 </li>
@@ -304,5 +312,6 @@
         </section>
       </div>
     </footer>
+    <script src="/source/js/script.js"></script>
   </body>
 </html>

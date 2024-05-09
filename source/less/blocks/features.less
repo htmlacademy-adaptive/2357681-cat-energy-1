@@ -1,14 +1,9 @@
-.section-title {
-  margin: 0;
-  padding: 0;
-  font-family: @oswald;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-}
-
 .features__title {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -17,34 +12,84 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  counter-reset: features__item 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 250px 250px;
+    column-gap: 137px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    grid-template-columns: 230px 246px 248px 250px;
+    column-gap: 83px;
+    margin-bottom: 69px;
   }
 }
 
 .features__item {
-  padding-left: 80px;
   font-family: @lato;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @specialgrey;
+  counter-increment: features__item 1;
+  position: relative;
+  /*background-repeat: no-repeat;*/
 
-  &:not(:last-child) {
-    padding-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  &:last-of-type {
-    padding-bottom: 50px;
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 50px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
+.features__item::before {
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    content: ""counter(features__item)"";
+    font-family: @oswald;
+    font-size: 280px;
+    line-height: 280px;
+    color: @lightgrey;
+    text-align: center;
+    z-index: -1;
+    left: 46%;
+  }
+}
+
+.features__item--result br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.features__description {
+  display: block;
+  margin: 0;
+  padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    padding: 140px 5px 78px 0;
+  }
+}

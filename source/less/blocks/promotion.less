@@ -6,6 +6,7 @@
 }
 
 .promotion__content {
+  position: relative;
   margin: 0;
   padding: 187px 61px 43px 58px;
   font-family: @lato;
@@ -14,4 +15,31 @@
   line-height: 20px;
   color: @white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    padding: 71px 125px 69px 421px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    padding: 185px 42px 43px 42px;
+  }
+}
+
+.promotion__content::before {
+  position: absolute;
+  content: url(../img/icons/promotion-gift.svg);
+  bottom: 150px;
+  left: 100px;
+
+  @media (min-width: @tablet-width) {
+    bottom: 60px;
+    left: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 150px;
+    left: 100px;
+  }
 }

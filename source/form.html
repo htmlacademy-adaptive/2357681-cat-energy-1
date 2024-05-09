@@ -15,15 +15,15 @@
               <picture class="logo__picture">
                 <source srcset="img/logos/logo-header-mobile.png" media="(max-width: 320px)">
                 <source srcset="img/logos/logo-header-tablet.png" media="(max-width: 768px)">
-                <source srcset="logo-header-desktop.png" media="(max-width: 1440px)">
+                <source srcset="img/logos/logo-header-desktop.png" media="(max-width: 1440px)">
                 <img src="img/logos/logo-header-mobile.png" width="190px" height="38px" alt="Cat Energy">
               </picture>
             </a>
-            <button class="navigation-toggle" type="button">
+          </div>
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню навигации.</span>
             </button>
-          </div>
-          <nav class="main-nav">
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
@@ -49,14 +49,14 @@
           <form class="selection__form form-select-program" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form-select-program__cat-and-program-wrapper">
               <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
-                <legend class="form-select-program__legend visually-hidden">Данные кота.</legend>
+                <legend class="visually-hidden">Данные кота.</legend>
                 <ul class="form-select-program__list">
                   <li class="form-select-program__item form-select-program__item--to-write">
-                    <label for="name">Имя:*</label>
+                    <label for="name">Имя:<sup>*</sup></label>
                     <input type="text" name="name" placeholder="Барсик" id="name" required>
                   </li>
                   <li class="form-select-program__item form-select-program__item--to-write">
-                    <label for="weight">Вес (кг):*</label>
+                    <label for="weight">Вес (кг):<sup>*</sup></label>
                     <input type="number" name="weight" placeholder="7" id="weight" min="0" max="30" required>
                   </li>
                   <li class="form-select-program__item form-select-program__item--to-write">
@@ -66,19 +66,28 @@
                 </ul>
               </fieldset>
               <fieldset class="form-select-program__fieldset form-select-program__fieldset--without-title">
-                <legend class="form-select-program__legend visually-hidden">Выбранная программа.</legend>
-                <ul class="form-select-program__list">
-                  <li class="form-select-program__item">
-                    <input type="radio" name="program" id="slim" value="slim" checked>
-                    <label for="slim">Похудение</label>
+                <legend class="visually-hidden">Выбранная программа.</legend>
+                <ul class="form-select-program__list form-select-program__list--with-border">
+                  <li class="form-select-program__item form-select-program__item--to-check">
+                    <label class="form-select-program__control">
+                      <input class="visually-hidden form-select-program__input" type="radio" name="program" id="slim" value="slim" checked>
+                      <span class="form-select-program__mark form-select-program__mark--radio"></span>
+                      <span class="form-select-program__label">Похудение</span>
+                    </label>
                   </li>
-                  <li class="form-select-program__item">
-                    <input type="radio" name="program" id="pro" value="pro">
-                    <label for="pro">Набор массы</label>
+                  <li class="form-select-program__item form-select-program__item--to-check">
+                    <label class="form-select-program__control">
+                      <input class="visually-hidden form-select-program__input" type="radio" name="program" id="pro" value="pro">
+                      <span class="form-select-program__mark form-select-program__mark--radio"></span>
+                      <span class="form-select-program__label">Набор массы</span>
+                    </label>
                   </li>
-                  <li class="form-select-program__item">
-                    <input type="radio" name="program" id="need-advice" value="need-advice">
-                    <label for="need-advice">Не знаю (нужен ваш совет)</label>
+                  <li class="form-select-program__item form-select-program__item--to-check">
+                    <label class="form-select-program__control">
+                      <input class="visually-hidden form-select-program__input" type="radio" name="program" id="need-advice" value="need-advice">
+                      <span class="form-select-program__mark form-select-program__mark--radio"></span>
+                      <span class="form-select-program__label">Не знаю (нужен ваш совет)</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -86,44 +95,56 @@
             <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
               <legend class="form-select-program__legend">Контактные данные (владельца кота)</legend>
               <ul class="form-select-program__list form-select-program__list--inline">
-                <li class="form-select-program__item form-select-program__item--to-write">
-                  <label for="email">E-mail:*</label>
+                <li class="form-select-program__item form-select-program__item--to-write form-select-program__item--email">
+                  <label for="email">E-mail:<sup>*</sup></label>
                   <input type="email" name="mail" placeholder="kuklachev@gmail.com" required>
                 </li>
-                <li class="form-select-program__item form-select-program__item--to-write">
-                <label for="number">Телефон:*</label>
+                <li class="form-select-program__item form-select-program__item--to-write form-select-program__item--phone">
+                <label for="number">Телефон:<sup>*</sup></label>
                 <input type="tel" name="phone" placeholder="8 (960) 900-60-90" id="number" maxlength="21" required>
                 </li>
               </ul>
             </fieldset>
             <div class="form-select-program__textfield">
-              <label class="form-select-program__legend" for="message">Комментарий</label>
+              <label class="form-select-program__legend form-select-program__legend--comment" for="message">Комментарий</label>
               <textarea class="form-select-program__textarea" name="comment" placeholder="Расскажите обо всех повадках кота" id="message"></textarea>
             </div>
-            <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title">
-              <legend class="form-select-program__legend">Дополнительно</legend>
+            <fieldset class="form-select-program__fieldset form-select-program__fieldset--with-title form-select-program__fieldset--additional">
+              <legend class="form-select-program__legend form-select-program__legend--additional">Дополнительно</legend>
               <ul class="form-select-program__list form-select-program__list--additional">
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="sweetener" id="sweetener" checked>
-                  <label for="sweetener">Сахарозаменитель</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Сахарозаменитель</span>
+                  </label>
                 </li>
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="water" id="water">
-                  <label for="water">Питьевая вода</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="water" id="water">
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Питьевая вода</span>
+                  </label>
                 </li>
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="milk" id="milk">
-                  <label for="milk">Молоко</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="milk" id="milk">
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Молоко</span>
+                  </label>
                 </li>
-                <li class="form-select-program__item">
-                  <input type="checkbox" name="vitamins" id="vitamins">
-                  <label for="vitamins">Витамины</label>
+                <li class="form-select-program__item form-select-program__item--to-check">
+                  <label class="form-select-program__control">
+                    <input class="visually-hidden form-select-program__input" type="checkbox" name="vitamins" id="vitamins">
+                    <span class="form-select-program__mark form-select-program__mark--checkbox"></span>
+                    <span class="form-select-program__label">Витамины</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
             <div class="form-select-program__button-wrapper">
               <button class="form-select-program__button button button--primary" type="submit">Отправить заявку</button>
-              <p class="form-select-program__required">* — Обязательные поля</p>
+              <p class="form-select-program__required"><sup>*</sup> — Обязательные поля</p>
             </div>
           </form>
         </section>
@@ -175,5 +196,6 @@
         </section>
       </div>
     </footer>
+    <script src="/source/js/script.js"></script>
   </body>
 </html>

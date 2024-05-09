@@ -1,9 +1,12 @@
-.hero-block--has-background {
+.hero-block {
   position: relative;
-  padding: 27px 35px 0 35px;
   background-image: url("../img/pictures/hero-block-background-mobile.jpg");
   background-position: center top;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
 
   &::after {
     content: "";
@@ -14,23 +17,64 @@
     height: 303px;
     background: @darkgreen;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 694px;
+      left: 50%;
+      top: -90px;
+      background-image: url(../img/pictures/hero-block-background-desktop.png);
+      background-size: 720px auto;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.hero-block__wrapper {
+  @media (min-width: @tablet-width) {
+    margin-left: 90px;
+    margin-right: 204px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 90px;
+    margin-right: 200px;
+    margin-bottom: 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 68px;
+    margin-right: 675px;
+    margin-bottom: 266px;
   }
 }
 
 .hero-block__title {
   display: block;
   padding: 0;
+  padding-top: 27px;
+  padding-bottom: 25px;
   margin: 0;
   font-family: @oswald;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  color: @black;
+  color: @white;
+  text-align: center;
 
-  &--has-background {
-    padding-bottom: 25px;
-    color: @white;
-    text-align: center;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+    text-align: left;
+    padding-top: 65px;
+    padding-bottom: 40px;
   }
 }
 
@@ -38,23 +82,32 @@
   margin: 0;
   font-family: @oswald;
   text-transform: uppercase;
-  color: @black;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: left;
+  font-size: 14px;
+  line-height: 14px;
+  color: @white;
+  text-align: center;
 
-  &--has-background {
-    font-size: 14px;
-    line-height: 14px;
-    color: @white;
-    text-align: center;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+    text-align: left;
   }
 }
 
 .hero-block__button {
+  width: 100%;
   margin-top: 135px;
-  margin-left: 20px;
-  margin-right: 20px;
   padding: 10px 63.5px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 59%;
+    margin-top: 50px;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
