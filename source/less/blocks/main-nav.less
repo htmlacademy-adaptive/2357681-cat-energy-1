@@ -172,18 +172,9 @@
   }
 }
 
-.main-nav__link--current-has-background {
-  position: relative;
-
-  &::after {
-    @media (min-width: @desktop-width) {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 2px;
-      background-color: @white;
-      bottom: -10px;
-      left: 0;
-    }
+.main-nav__list--has-background .main-nav__link--current::after {
+  @media (min-width: @desktop-width) {
+    background-color: @white;
   }
 }
+
