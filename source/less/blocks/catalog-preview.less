@@ -26,7 +26,7 @@
 }
 
 .catalog-preview__text-wrapper {
-  padding: 30px 33px 20px 20px;
+  padding: 24px 33px 20px 20px;
 
   @media (min-width: @tablet-width) {
     padding: 77px 316px 57px 52px;
@@ -38,7 +38,9 @@
 }
 
 .catalog-preview__title {
+  position: relative;
   margin: 0;
+  padding-top: 6px;
   padding-left: 70px;
   padding-bottom: 30px;
   font-family: @oswald;
@@ -46,7 +48,7 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
@@ -57,6 +59,44 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 162px;
+  }
+}
+
+.catalog-preview__title--slim::after {
+  position: absolute;
+  content: url("../img/icons/catalog-slim-mobile.svg");
+  left: 0;
+  bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/icons/catalog-slim-tablet.svg");
+    left: 400px;
+    bottom: -150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: url("../img/icons/catalog-slim-desktop.svg");
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.catalog-preview__title--pro::after {
+  position: absolute;
+  content: url("../img/icons/catalog-pro-mobile.svg");
+  left: -8px;
+  bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/icons/catalog-pro-tablet.svg");
+    left: 350px;
+    bottom: -150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: url("../img/icons/catalog-pro-desktop.svg");
+    left: 0;
+    bottom: 0;
   }
 }
 
