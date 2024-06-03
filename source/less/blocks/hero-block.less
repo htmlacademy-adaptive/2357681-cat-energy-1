@@ -4,6 +4,11 @@
   background-position: center top;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/pictures/hero-block-background-mobile-x2.jpg");
+    background-size: 320px auto;
+  }
+
   @media (min-width: @tablet-width) {
     background-image: none;
   }
@@ -29,9 +34,14 @@
       height: 694px;
       left: 50%;
       top: -90px;
-      background-image: url(../img/pictures/hero-block-background-desktop.png);
+      background-image: url("../img/pictures/hero-block-background-desktop.png");
       background-size: 720px auto;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/pictures/hero-block-background-desktop-x2.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }
