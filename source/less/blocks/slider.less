@@ -1,6 +1,9 @@
 .slider {
+  position: relative;
+  display: flex;
   width: 280px;
-  height: 256px;
+  height: 296px;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     width: 560px;
@@ -11,4 +14,49 @@
     width: 560px;
     height: 512px;
   }
+}
+
+.slider__curtain {
+  position: absolute;
+  display: block;
+  padding: 0;
+  left: 138px;
+  width: 4px;
+  height: 256px;
+  border-radius: 2px;
+  border: none;
+  background-color: @lightblack;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+    left: 277px;
+  }
+}
+
+.slider__curtain:hover {
+  cursor: pointer;
+  background-color: @green;
+}
+
+.slider__curtain:active {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.slider__toggle {
+  position: absolute;
+  left: -17px;
+  bottom: 110px;
+
+  @media (min-width: @tablet-width) {
+    bottom: 230px;
+  }
+}
+
+.slider__toggle:hover path {
+  fill: @green;
+}
+
+.slider__toggle:hover rect {
+  stroke: green;
 }
