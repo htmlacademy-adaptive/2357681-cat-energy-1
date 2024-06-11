@@ -32,6 +32,7 @@
 
 .promotion__content {
   position: relative;
+  display: block;
   margin: 0;
   padding: 187px 61px 43px 58px;
   font-family: @lato;
@@ -47,8 +48,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 80%;
     text-align: center;
-    padding: 185px 35px 43px 42px;
+    padding: 185px 0 43px 40px;
+    overflow-x: hidden;
   }
 }
 

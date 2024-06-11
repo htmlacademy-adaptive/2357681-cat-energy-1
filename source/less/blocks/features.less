@@ -29,13 +29,13 @@
 }
 
 .features__item {
+  position: relative;
   font-family: @lato;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @specialgrey;
   counter-increment: features__item;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 37px;
@@ -84,17 +84,7 @@
   }
 }
 
-.features__item--healthy,
-.features__item--fast,
-.features__item--functional,
-.features__item--result {
-  position: relative;
-}
-
-.features__item--healthy::before,
-.features__item--fast::before,
-.features__item--functional::before,
-.features__item--result::before {
+.features__item::before {
   content: "";
   position: absolute;
   width: 60px;
