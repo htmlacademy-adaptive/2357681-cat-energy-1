@@ -64,6 +64,17 @@
 }
 
 .stats__item--secondary {
+  display: flex;
+  padding-left: 46px;
+  margin-bottom: 20px;
+  gap: 2px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;

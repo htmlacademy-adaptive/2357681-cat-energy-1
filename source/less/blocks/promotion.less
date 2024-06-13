@@ -1,12 +1,38 @@
 .promotion {
   background-color: @green;
-  background-image: url("../img/pictures/catalog-promo-background-small.jpg");
+  background-image: url("../img/pictures/catalog-promo-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 280px auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/pictures/catalog-promo-background-mobile-x2.jpg");
+    background-size: 280px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/pictures/catalog-promo-background-tablet.jpg");
+    background-size: 707px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pictures/catalog-promo-background-tablet-x2.jpg");
+      background-size: 707px auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/pictures/catalog-promo-background-desktop.jpg");
+    background-size: 245px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pictures/catalog-promo-background-desktop-x2.jpg");
+      background-size: 245px auto;
+    }
+  }
 }
 
 .promotion__content {
   position: relative;
+  display: block;
   margin: 0;
   padding: 187px 61px 43px 58px;
   font-family: @lato;
@@ -22,14 +48,16 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 80%;
     text-align: center;
-    padding: 185px 42px 43px 42px;
+    padding: 185px 0 43px 40px;
+    overflow-x: hidden;
   }
 }
 
 .promotion__content::before {
   position: absolute;
-  content: url(../img/icons/promotion-gift.svg);
+  content: url("../img/icons/promotion-gift.svg");
   bottom: 150px;
   left: 100px;
 
@@ -40,6 +68,6 @@
 
   @media (min-width: @desktop-width) {
     bottom: 150px;
-    left: 100px;
+    left: 85px;
   }
 }

@@ -29,14 +29,13 @@
 }
 
 .features__item {
+  position: relative;
   font-family: @lato;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @specialgrey;
-  counter-increment: features__item 1;
-  position: relative;
-  /*background-repeat: no-repeat;*/
+  counter-increment: features__item;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 37px;
@@ -61,11 +60,11 @@
   }
 }
 
-.features__item::before {
+.features__item::after {
   position: absolute;
 
   @media (min-width: @tablet-width) {
-    content: ""counter(features__item)"";
+    content: counter(features__item);
     font-family: @oswald;
     font-size: 280px;
     line-height: 280px;
@@ -73,6 +72,7 @@
     text-align: center;
     z-index: -1;
     left: 46%;
+    bottom: 20px;
   }
 }
 
@@ -83,6 +83,53 @@
     display: block;
   }
 }
+
+.features__item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    bottom: 180px;
+  }
+}
+
+.features__item--healthy::before {
+  content: url("../img/icons/healthy-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/icons/healthy-tablet.svg");
+  }
+}
+
+.features__item--fast::before {
+  content: url("../img/icons/fast-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/icons/fast-tablet.svg");
+  }
+}
+
+.features__item--functional::before {
+  content: url("../img/icons/functional-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/icons/functional-tablet.svg");
+  }
+}
+
+.features__item--result::before {
+  content: url("../img/icons/result-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/icons/result-tablet.svg");
+  }
+}
+
 
 .features__description {
   display: block;

@@ -4,6 +4,11 @@
   background-position: center top;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/pictures/hero-block-background-mobile-x2.jpg");
+    background-size: 320px auto;
+  }
+
   @media (min-width: @tablet-width) {
     background-image: none;
   }
@@ -15,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 303px;
-    background: @darkgreen;
+    background-color: @darkgreen;
     z-index: -1;
 
     @media (min-width: @tablet-width) {
@@ -25,13 +30,19 @@
     @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
-      width: 720px;
+      width: 50%;
       height: 694px;
-      left: 50%;
-      top: -90px;
-      background-image: url(../img/pictures/hero-block-background-desktop.png);
+      left: 53%;
+      top: -140px;
+      background-image: url("../img/pictures/hero-block-background-desktop.png");
+      background-color: @darkgreen;
       background-size: 720px auto;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/pictures/hero-block-background-desktop-x2.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }
@@ -96,8 +107,9 @@
 }
 
 .hero-block__button {
+  position: relative;
   width: 100%;
-  margin-top: 135px;
+  margin-top: 302px;
   padding: 10px 63.5px;
   font-size: 16px;
   line-height: 20px;
@@ -111,3 +123,46 @@
   }
 }
 
+.hero-block__button::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 270px;
+  left: 0;
+  bottom: 40px;
+  background-image: url("../img/pictures/index-can-mobile.png");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/pictures/index-can-mobile-x2.png");
+    background-size: 280px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+    background-image: url("../img/pictures/index-can-tablet.png");
+    background-size: 709px auto;
+    left: -80px;
+    top: -20px;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pictures/index-can-tablet-x2.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    background-image: url("../img/pictures/index-can-desktop.png");
+    background-size: 552px auto;
+    left: 423px;
+    top: -305px;
+    z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pictures/index-can-desktop-x2.png");
+    }
+  }
+}
