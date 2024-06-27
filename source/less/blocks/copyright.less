@@ -1,4 +1,5 @@
 .copyright__link {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 0;
@@ -12,7 +13,7 @@
 
 .copyright__title {
   margin: 0;
-  padding-right: 140px;
+  padding-right: 50%;
   font-family: @lato;
   font-weight: 400;
   font-size: 16px;
@@ -24,6 +25,21 @@
   }
 }
 
-.copyright__logo {
+.copyright__link::after {
+  content: "";
   display: block;
+  mask-image: url("../img/sprite.svg#logo-academy");
+  width: 27px;
+  height: 34px;
+  background-color: @lightblack;
+}
+
+.copyright__link:hover::after,
+.copyright__link:focus::after,
+.copyright__link:active::after {
+  background-color: @green;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
 }
