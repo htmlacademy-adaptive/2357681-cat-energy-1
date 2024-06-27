@@ -128,6 +128,7 @@
 
 .catalog-preview__link {
   display: flex;
+  position: relative;
   align-items: center;
   gap: 15px;
   color: @black;
@@ -148,4 +149,33 @@
 
 .catalog-preview__link:focus {
   opacity: 0.3;
+}
+
+.catalog-preview__link::after {
+  content: "";
+  position: absolute;
+  mask-image: url("../img/sprite.svg#arrow-right");
+  background-color: @black;
+  width: 24px;
+  height: 12px;
+}
+
+.catalog-preview__link--slim::after {
+  left: 102px;
+
+  @media (min-width: @tablet-width) {
+    left: 133px;
+  }
+}
+
+.catalog-preview__link--pro::after {
+  left: 98px;
+
+  @media (min-width: @tablet-width) {
+    left: 129px;
+  }
+}
+
+.catalog-preview__link:hover::after {
+  transform: scaleX(1.3);
 }
