@@ -23,12 +23,6 @@
     </g><defs><clipPath id="a"><path fill="#fff" d="M0 0h27v34H0z"/></clipPath></defs>
   </svg>
 
-  <svg id="slider-icon" viewBox="0 0 40 40">
-    <rect width="38" height="38" x="1" y="1" fill="#fff" rx="19"/>
-    <rect width="38" height="38" x="1" y="1" stroke="#666" stroke-width="2" rx="19"/>
-    <path fill="#666" d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z"/>
-  </svg>
-
   <svg id="form-email" viewBox="0 0 20 20">
     <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M1.5 8.5v8h17v-8m-17-5h17v2l-8.5 6-8.5-6v-2Z"/>
   </svg>
