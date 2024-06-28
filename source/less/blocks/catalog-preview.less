@@ -26,6 +26,7 @@
 }
 
 .catalog-preview__text-wrapper {
+  position: relative;
   padding: 24px 33px 20px 20px;
 
   @media (min-width: @tablet-width) {
@@ -38,7 +39,6 @@
 }
 
 .catalog-preview__title {
-  position: relative;
   margin: 0;
   padding-top: 6px;
   padding-left: 70px;
@@ -62,41 +62,35 @@
   }
 }
 
-.catalog-preview__title--slim::after {
+.catalog-preview__icon--slim {
   position: absolute;
-  content: url("../img/icons/catalog-slim-mobile.svg");
-  left: 0;
-  bottom: 20px;
+  left: 20px;
+  bottom: 185px;
 
   @media (min-width: @tablet-width) {
-    content: url("../img/icons/catalog-slim-tablet.svg");
-    left: 400px;
-    bottom: -150px;
+    left: 420px;
+    bottom: 80px;
   }
 
   @media (min-width: @desktop-width) {
-    content: url("../img/icons/catalog-slim-desktop.svg");
-    left: 0;
-    bottom: 0;
+    left: 50px;
+    bottom: 205px;
   }
 }
 
-.catalog-preview__title--pro::after {
+.catalog-preview__icon--pro {
   position: absolute;
-  content: url("../img/icons/catalog-pro-mobile.svg");
-  left: -8px;
-  bottom: 20px;
+  left: 15px;
+  bottom: 177px;
 
   @media (min-width: @tablet-width) {
-    content: url("../img/icons/catalog-pro-tablet.svg");
-    left: 350px;
-    bottom: -150px;
+    left: 405px;
+    bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    content: url("../img/icons/catalog-pro-desktop.svg");
-    left: 0;
-    bottom: 0;
+    left: 50px;
+    bottom: 190px;
   }
 }
 
@@ -134,6 +128,7 @@
 
 .catalog-preview__link {
   display: flex;
+  position: relative;
   align-items: center;
   gap: 15px;
   color: @black;
@@ -154,4 +149,33 @@
 
 .catalog-preview__link:focus {
   opacity: 0.3;
+}
+
+.catalog-preview__link::after {
+  content: "";
+  position: absolute;
+  mask-image: url("../img/sprite.svg#arrow-right");
+  background-color: @black;
+  width: 24px;
+  height: 12px;
+}
+
+.catalog-preview__link--slim::after {
+  left: 102px;
+
+  @media (min-width: @tablet-width) {
+    left: 133px;
+  }
+}
+
+.catalog-preview__link--pro::after {
+  left: 98px;
+
+  @media (min-width: @tablet-width) {
+    left: 129px;
+  }
+}
+
+.catalog-preview__link:hover::after {
+  transform: scaleX(1.3);
 }

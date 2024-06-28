@@ -25,8 +25,11 @@
   text-transform: uppercase;
 
   &--big {
+    padding: 15px 21px 18px 21px;
     font-size: 24px;
     line-height: 24px;
+    border: 1px solid @darkbeige;
+    border-radius: 4px;
 
     @media (min-width: @tablet-width) {
       font-size: 30px;
@@ -44,11 +47,20 @@
       text-align: right;
     }
   }
+
+  &--left {
+    padding: 15px 42px 18px 42px;
+  }
 }
 
 .stats__description {
+  display: block;
+  width: 87px;
   padding: 0;
   margin: 0;
+  margin-left: 18px;
+  margin-top: -9px;
+  background-color: @darkgrey;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -60,6 +72,27 @@
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    background-color: @white;
+    width: 130px;
+    margin-left: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @darkgrey;
+  }
+
+  &--left {
+    @media (min-width: @tablet-width) {
+      width: 115px;
+    }
+  }
+}
+
+.stats__description br {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

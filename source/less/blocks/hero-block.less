@@ -1,11 +1,11 @@
 .hero-block {
   position: relative;
-  background-image: url("../img/pictures/hero-block-background-mobile.jpg");
+  background-image: url("../img/pictures/hero-block-background-mobile.webp");
   background-position: center top;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/pictures/hero-block-background-mobile-x2.jpg");
+    background-image: url("../img/pictures/hero-block-background-mobile-x2.webp");
     background-size: 320px auto;
   }
 
@@ -34,13 +34,14 @@
       height: 694px;
       left: 53%;
       top: -140px;
-      background-image: url("../img/pictures/hero-block-background-desktop.png");
+      background-image: url("../img/pictures/hero-block-background-desktop.webp");
       background-color: @darkgreen;
       background-size: 720px auto;
+      background-position: top right;
       background-repeat: no-repeat;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/pictures/hero-block-background-desktop-x2.jpg");
+        background-image: url("../img/pictures/hero-block-background-desktop-x2.webp");
         background-size: 720px auto;
       }
     }
@@ -48,6 +49,8 @@
 }
 
 .hero-block__wrapper {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     margin-left: 90px;
     margin-right: 204px;
@@ -91,6 +94,7 @@
 
 .hero-block__slogan {
   margin: 0;
+  margin-bottom: 29px;
   font-family: @oswald;
   text-transform: uppercase;
   font-size: 14px;
@@ -99,6 +103,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     font-size: 20px;
     line-height: 20px;
     color: @black;
@@ -107,9 +112,8 @@
 }
 
 .hero-block__button {
-  position: relative;
   width: 100%;
-  margin-top: 302px;
+  margin-top: 1px;
   padding: 10px 63.5px;
   font-size: 16px;
   line-height: 20px;
@@ -123,46 +127,17 @@
   }
 }
 
-.hero-block__button::before {
-  content: "";
-  position: absolute;
-  width: 280px;
-  height: 270px;
-  left: 0;
-  bottom: 40px;
-  background-image: url("../img/pictures/index-can-mobile.png");
-  background-repeat: no-repeat;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/pictures/index-can-mobile-x2.png");
-    background-size: 280px auto;
-  }
-
+.hero-block__picture {
   @media (min-width: @tablet-width) {
-    width: 709px;
-    height: 609px;
-    background-image: url("../img/pictures/index-can-tablet.png");
-    background-size: 709px auto;
+    position: absolute;
     left: -80px;
-    top: -20px;
+    top: 266px;
     z-index: -1;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/pictures/index-can-tablet-x2.png");
-    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 552px;
-    height: 499px;
-    background-image: url("../img/pictures/index-can-desktop.png");
-    background-size: 552px auto;
-    left: 423px;
-    top: -305px;
+    left: 400px;
+    top: 0;
     z-index: 1;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/pictures/index-can-desktop-x2.png");
-    }
   }
 }

@@ -76,7 +76,7 @@
 
     @media (min-width: @desktop-width) {
       display: grid;
-      grid-template-columns: repeat(4,221px);
+      grid-template-columns: repeat(4, 221px);
       column-gap: 60px;
     }
   }
@@ -126,7 +126,9 @@
 .form-select-program__item--email::after {
   position: absolute;
   display: block;
-  content: url(../img/icons/form-email.svg);
+  content: "";
+  mask: url("../img/sprite.svg#form-email");
+  background-color: @black;
   width: 17px;
   height: 13px;
   top: 13px;
@@ -145,7 +147,9 @@
 .form-select-program__item--phone::after {
   position: absolute;
   display: block;
-  content: url(../img/icons/form-phone.svg);
+  content: "";
+  mask-image: url("../img/sprite.svg#form-phone");
+  background-color: @black;
   width: 15px;
   height: 15px;
   top: 13px;

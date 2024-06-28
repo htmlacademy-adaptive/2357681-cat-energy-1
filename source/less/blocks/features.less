@@ -84,52 +84,14 @@
   }
 }
 
-.features__item::before {
-  content: "";
+.features__icon {
   position: absolute;
-  width: 60px;
-  height: 60px;
   bottom: 0;
 
   @media (min-width: @tablet-width) {
-    width: 80px;
-    height: 80px;
     bottom: 180px;
   }
 }
-
-.features__item--healthy::before {
-  content: url("../img/icons/healthy-mobile.svg");
-
-  @media (min-width: @tablet-width) {
-    content: url("../img/icons/healthy-tablet.svg");
-  }
-}
-
-.features__item--fast::before {
-  content: url("../img/icons/fast-mobile.svg");
-
-  @media (min-width: @tablet-width) {
-    content: url("../img/icons/fast-tablet.svg");
-  }
-}
-
-.features__item--functional::before {
-  content: url("../img/icons/functional-mobile.svg");
-
-  @media (min-width: @tablet-width) {
-    content: url("../img/icons/functional-tablet.svg");
-  }
-}
-
-.features__item--result::before {
-  content: url("../img/icons/result-mobile.svg");
-
-  @media (min-width: @tablet-width) {
-    content: url("../img/icons/result-tablet.svg");
-  }
-}
-
 
 .features__description {
   display: block;

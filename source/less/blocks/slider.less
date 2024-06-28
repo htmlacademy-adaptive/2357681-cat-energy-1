@@ -60,3 +60,28 @@
 .slider__toggle:hover rect {
   stroke: @green;
 }
+
+.slider__before,
+.slider__after {
+  overflow: hidden;
+}
+
+.slider__before-img,
+.slider__after-img {
+  display: block;
+  object-fit: cover;
+}
+
+.slider__after {
+  position: relative;
+}
+
+
+.slider__after-img {
+  position: relative;
+  right: 140px;
+
+  @media (min-width: @tablet-width) {
+    right: 282px;
+  }
+}
