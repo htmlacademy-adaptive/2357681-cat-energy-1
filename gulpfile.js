@@ -2,19 +2,23 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
 // Styles
 
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(less())
+export const styles = () => { //name
+  return gulp.src('source/less/style.less', { sourcemaps: true }) //1. style.less
+    .pipe(plumber()) //2. обработка ошибок
+    .pipe(less()) // style.less -> style.css
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(), //style.css -> style.css[prefix]
+      csso() // style.css[prefix] -> style.css[prefix, min]
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('source/css', { sourcemaps: '.' })) //3. положить файл и карту кода в нужную папку
     .pipe(browser.stream());
 }
 
