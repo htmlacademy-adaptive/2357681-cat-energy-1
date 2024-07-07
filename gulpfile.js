@@ -18,6 +18,14 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+export const css = () => {
+  return gulp.src('./src/*.css')
+    .pipe(postcss([
+      autoprefixer(),
+    ]))
+    .pipe(gulp.dest('./dest'))
+};
+
 // Server
 
 const server = (done) => {
