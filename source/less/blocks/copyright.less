@@ -25,19 +25,14 @@
   }
 }
 
-.copyright__link::after {
-  content: "";
+.copyright__icon {
   display: block;
-  mask-image: url("../img/sprite.svg#logo-academy");
-  width: 27px;
-  height: 34px;
-  background-color: @lightblack;
 }
 
-.copyright__link:hover::after,
-.copyright__link:focus::after,
-.copyright__link:active::after {
-  background-color: @green;
+.copyright__link:hover .copyright__icon,
+.copyright__link:focus .copyright__icon,
+.copyright__link:active .copyright__icon {
+  fill: @green;
 }
 
 .copyright__link:active {

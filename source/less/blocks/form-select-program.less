@@ -123,14 +123,9 @@
   position: relative;
 }
 
-.form-select-program__item--email::after {
+.form-select-program__icon--email {
   position: absolute;
   display: block;
-  content: "";
-  mask: url("../img/sprite.svg#form-email");
-  background-color: @black;
-  width: 17px;
-  height: 13px;
   top: 13px;
   left: 250px;
 
@@ -144,15 +139,10 @@
   }
 }
 
-.form-select-program__item--phone::after {
+.form-select-program__icon--phone {
   position: absolute;
   display: block;
-  content: "";
-  mask-image: url("../img/sprite.svg#form-phone");
-  background-color: @black;
-  width: 15px;
-  height: 15px;
-  top: 13px;
+  top: 16px;
   left: 250px;
 
   @media (min-width: @tablet-width) {

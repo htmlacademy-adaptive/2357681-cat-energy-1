@@ -84,10 +84,16 @@
 							<li class="form-select-program__item form-select-program__item--to-write form-select-program__item--email">
 								<label for="email">E-mail:<sup>*</sup></label>
 								<input type="email" name="mail" placeholder="kuklachev@gmail.com" required>
+                <svg class="form-select-program__icon form-select-program__icon--email" width="20" height="15">
+                  <use href="img/sprite.svg#form-email"></use>
+                </svg>
 							</li>
 							<li class="form-select-program__item form-select-program__item--to-write form-select-program__item--phone">
 								<label for="number">Телефон:<sup>*</sup></label>
 								<input type="tel" name="phone" placeholder="8 (960) 900-60-90" id="number" maxlength="21" required>
+                <svg class="form-select-program__icon form-select-program__icon--phone" width="17" height="17">
+                  <use href="img/sprite.svg#form-phone"></use>
+                </svg>
 							</li>
 						</ul>
 					</fieldset>
@@ -151,13 +157,41 @@
 			<section class="connection__socials socials">
 				<h2 class="visually-hidden">Мы в социальных сетях.</h2>
 				<ul class="socials__list">
-					<li class="socials__item"><a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy"><h3 class="visually-hidden">Мы Вконтакте.</h3></a></li>
-					<li class="socials__item"><a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><h3 class="visually-hidden">Мы на Ютубе.</h3></a></li>
-					<li class="socials__item"><a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy"><h3 class="visually-hidden">Мы в Телеграм.</h3></a></li>
+					<li class="socials__item">
+            <a class="socials__link" href="https://vk.com/htmlacademy">
+              <svg class="socials__icon" width="28" height="22">
+                <use href="img/sprite.svg#vk"></use>
+              </svg>
+              <h3 class="visually-hidden">Мы Вконтакте.</h3>
+            </a>
+          </li>
+					<li class="socials__item">
+            <a class="socials__link" href="https://www.youtube.com/user/htmlacademyru">
+              <svg class="socials__icon" width="28" height="22">
+                <use href="img/sprite.svg#youtube"></use>
+              </svg>
+              <h3 class="visually-hidden">Мы на Ютубе.</h3>
+            </a>
+          </li>
+					<li class="socials__item">
+            <a class="socials__link" href="https://t.me/htmlacademy">
+              <svg class="socials__icon" width="28" height="22">
+                <use href="img/sprite.svg#telegram"></use>
+              </svg>
+              <h3 class="visually-hidden">Мы в Телеграм.</h3>
+            </a>
+          </li>
 				</ul>
 			</section>
 			<section class="connection__copyright copyright">
-				<h2 class="visually-hidden">Права на сайт принадлежат HTML Academy.</h2><a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><h3 class="copyright__title">HTML Academy</h3></a></section>
+				<h2 class="visually-hidden">Права на сайт принадлежат HTML Academy.</h2>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <h3 class="copyright__title">HTML Academy</h3>
+          <svg class="copyright__icon" width="27" height="34">
+            <use href="img/sprite.svg#logo-academy"></use>
+          </svg>
+        </a>
+      </section>
 		</div>
 	</footer>
 	<script src="/source/js/script.js"></script>

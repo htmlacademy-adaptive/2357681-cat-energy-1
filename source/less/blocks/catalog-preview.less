@@ -151,16 +151,11 @@
   opacity: 0.3;
 }
 
-.catalog-preview__link::after {
-  content: "";
+.catalog-preview__arrow {
   position: absolute;
-  mask-image: url("../img/sprite.svg#arrow-right");
-  background-color: @black;
-  width: 24px;
-  height: 12px;
 }
 
-.catalog-preview__link--slim::after {
+.catalog-preview__arrow--slim {
   left: 102px;
 
   @media (min-width: @tablet-width) {
@@ -168,7 +163,7 @@
   }
 }
 
-.catalog-preview__link--pro::after {
+.catalog-preview__arrow--pro {
   left: 98px;
 
   @media (min-width: @tablet-width) {
@@ -176,6 +171,6 @@
   }
 }
 
-.catalog-preview__link:hover::after {
+.catalog-preview__arrow:hover {
   transform: scaleX(1.3);
 }
