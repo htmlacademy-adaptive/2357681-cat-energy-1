@@ -1,13 +1,14 @@
 .hero-block {
   position: relative;
-  background-image: url("../img/pictures/hero-block-background-mobile.webp");
+  background-image: image-set(
+    url("../img/pictures/hero-block-background-mobile.webp") type("image/webp") 1x,
+    url("../img/pictures/hero-block-background-mobile-x2.webp") type("image/webp") 2x,
+    url("../img/pictures/hero-block-background-mobile.jpg") type("image/jpg") 1x,
+    url("../img/pictures/hero-block-background-mobile-x2.jpg") type("image/jpg") 2x
+  );
   background-position: center top;
   background-repeat: no-repeat;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/pictures/hero-block-background-mobile-x2.webp");
-    background-size: 320px auto;
-  }
+  background-size: 320px auto;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -34,16 +35,16 @@
       height: 694px;
       left: 53%;
       top: -140px;
-      background-image: url("../img/pictures/hero-block-background-desktop.webp");
+      background-image: image-set(
+        url("../img/pictures/hero-block-background-desktop.webp") type("image/webp") 1x,
+        url("../img/pictures/hero-block-background-desktop-x2.webp") type("image/webp") 2x,
+        url("../img/pictures/hero-block-background-desktop.jpg") type("image/jpg") 1x,
+        url("../img/pictures/hero-block-background-desktop-x2.jpg") type("image/jpg") 2x
+      );
       background-color: @darkgreen;
       background-size: 720px auto;
       background-position: top right;
       background-repeat: no-repeat;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/pictures/hero-block-background-desktop-x2.webp");
-        background-size: 720px auto;
-      }
     }
   }
 }
