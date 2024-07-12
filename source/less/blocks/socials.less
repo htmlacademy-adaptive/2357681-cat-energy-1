@@ -17,32 +17,21 @@
   }
 }
 
-.socials__link::after {
-  content: "";
+.socials__link {
   display: block;
-  background-color: @lightblack;
-  width: 28px;
-  height: 22px;
+  text-align: center;
 }
 
-.socials__link:hover::after,
-.socials__link:focus::after,
-.socials__link:active::after {
-  background-color: @green;
+.socials__icon {
+  fill: @lightblack;
 }
 
-.socials__link:active::after {
+.socials__link:hover .socials__icon,
+.socials__link:focus .socials__icon,
+.socials__link:active .socials__icon {
+  fill: @green;
+}
+
+.socials__link:active .socials__icon {
   opacity: 0.3;
-}
-
-.socials__link--vkontakte::after {
-  mask-image: url("../img/sprite.svg#vk");
-}
-
-.socials__link--youtube::after {
-  mask-image: url("../img/sprite.svg#youtube");
-}
-
-.socials__link--telegram::after {
-  mask-image: url("../img/sprite.svg#telegram");
 }

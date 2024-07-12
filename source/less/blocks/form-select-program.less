@@ -123,49 +123,29 @@
   position: relative;
 }
 
-.form-select-program__item--email::after {
+.form-select-program__icon {
   position: absolute;
   display: block;
-  content: "";
-  mask: url("../img/sprite.svg#form-email");
-  background-color: @black;
-  width: 17px;
-  height: 13px;
-  top: 13px;
-  left: 250px;
+  top: 16px;
+  right: 15px;
+  stroke: @specialblack;
+  fill: none;
 
   @media (min-width: @tablet-width) {
-    top: 10px;
-    left: 635px;
-  }
-
-  @media (min-width: @tablet-width) {
-    left: 540px;
+    top: 16px;
+    right: 20px;
   }
 }
 
-.form-select-program__item--phone::after {
-  position: absolute;
-  display: block;
-  content: "";
-  mask-image: url("../img/sprite.svg#form-phone");
-  background-color: @black;
-  width: 15px;
-  height: 15px;
-  top: 13px;
-  left: 250px;
-
-  @media (min-width: @tablet-width) {
-    top: 10px;
-    left: 635px;
-  }
-
-  @media (min-width: @tablet-width) {
-    left: 540px;
-  }
+.form-select-program__input:focus + .form-select-program__icon {
+  stroke: @green;
 }
 
-.form-select-program__item--to-write input {
+.form-select-program__input:invalid + .form-select-program__icon {
+  stroke: @red;
+}
+
+.form-select-program__input {
   flex-grow: 1;
   padding: 14px 0 13px 15px;
   font-family: @oswald;
@@ -175,6 +155,18 @@
   color: @specialgrey;
   text-transform: uppercase;
   border: 1px solid @brightgrey;
+}
+
+.form-select-program__item--to-write input:hover {
+  border: 1px solid @darkbeige;
+}
+
+.form-select-program__item--to-write input:focus {
+  border: 2px solid @specialgrey;
+}
+
+.form-select-program__item--to-write input:invalid {
+  border: 2px solid @red;
 }
 
 .form-select-program__item--to-write label {
