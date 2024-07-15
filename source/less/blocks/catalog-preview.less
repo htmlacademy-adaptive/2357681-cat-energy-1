@@ -147,8 +147,15 @@
   }
 }
 
-.catalog-preview__link:focus {
+.catalog-preview__link:focus,
+.catalog-preview__link:active {
   opacity: 0.3;
+}
+
+.catalog-preview__link:hover .catalog-preview__arrow,
+.catalog-preview__link:focus .catalog-preview__arrow,
+.catalog-preview__link:active .catalog-preview__arrow {
+  transform: scaleX(1.3);
 }
 
 .catalog-preview__arrow {
@@ -169,8 +176,4 @@
   @media (min-width: @tablet-width) {
     left: 129px;
   }
-}
-
-.catalog-preview__arrow:hover {
-  transform: scaleX(1.3);
 }
