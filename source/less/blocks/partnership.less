@@ -9,13 +9,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 60px 70px;
+    padding: 52px 68px 60px;
+    gap: 308px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 80px;
+    padding: 57px 80px 60px;
     width: 565px;
     background-color: @white;
+    gap: 0;
   }
 }
 
@@ -23,7 +25,7 @@
   display: block;
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 80vw;
   font-family: @oswald;
   font-weight: 400;
   font-size: 16px;
@@ -56,18 +58,42 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    width: 25%;
   }
 
   @media (min-width: @desktop-width) {
-    width: 40%;
+    text-align: left;
   }
 }
 
-.partnership__adress br {
+.partnership__adress--primary {
+  width: 43vw;
+
+  @media (min-width: @tablet-width) {
+    width: 21vw;
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 21vw;
+  }
+}
+
+.partnership__adress--primary br {
   display: none;
 
   @media (min-width: @tablet-width) {
     display: block;
+  }
+}
+
+.partnership__adress--secondary {
+  @media (min-width: @desktop-width) {
+    width: 15vw;
+  }
+}
+
+.partnership__adress--wrapper {
+  @media (min-width: @desktop-width) {
+    width: 38%;
   }
 }

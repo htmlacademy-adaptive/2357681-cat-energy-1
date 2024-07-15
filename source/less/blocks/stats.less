@@ -1,17 +1,16 @@
 .stats__wrapper-primary {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
-    width: 48%;
-    padding-bottom: 0;
+    width: 52%;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 95%;
-    padding-left: 35px;
-    padding-bottom: 55px;
+    margin-bottom: 51px;
   }
 }
 
@@ -34,6 +33,7 @@
     @media (min-width: @tablet-width) {
       font-size: 30px;
       line-height: 37px;
+      padding: 15px 30px 18px 31px;
     }
   }
 
@@ -50,6 +50,14 @@
 
   &--left {
     padding: 15px 42px 18px 42px;
+
+    @media (min-width: @tablet-width) {
+      padding: 15px 56px 18px 56px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 17px 55px 18px 47px;
+    }
   }
 }
 
@@ -74,7 +82,7 @@
     line-height: 14px;
     background-color: @white;
     width: 130px;
-    margin-left: 8px;
+    margin-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -110,8 +118,8 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
+    width: 100%;
+    gap: 65px;
     padding-bottom: 75px;
   }
 }

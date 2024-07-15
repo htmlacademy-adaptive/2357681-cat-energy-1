@@ -23,7 +23,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 25%;
+    top: 23%;
     z-index: -1;
   }
 }
@@ -51,21 +51,21 @@
 }
 
 .product-promotion__title {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 146px;
+    margin-bottom: 148px;
   }
 }
 
 .product-promotion__description {
   padding: 0;
   margin: 0;
-  padding-bottom: 35px;
+  margin-bottom: 18px;
   font-family: @lato;
   font-weight: 400;
   font-size: 14px;
@@ -75,13 +75,21 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-bottom: 55px;
+    margin-bottom: 53px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
-    padding-bottom: 69px;
+    margin-bottom: 69px;
+  }
+}
+
+.product-promotion__description br {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -89,21 +97,22 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 99px;
+    align-items: center;
+    padding-bottom: 209px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
     padding-bottom: 0;
-    width: 80%;
+    width: 86%;
   }
 }
 
 .product-promotion__slider {
   @media (min-width: @tablet-width) {
     position: relative;
-    bottom: 50px;
-    left: 60px;
+    bottom: 109px;
+    left: 75px;
   }
 
   @media (min-width: @desktop-width) {
