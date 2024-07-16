@@ -18,7 +18,7 @@
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px 0 40px;
-    margin: 70px 245px 80px 40px;
+    margin: 70px 245px 82px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,7 +33,7 @@
   height: 2px;
   width: 100vw;
   top: 50%;
-  margin-top: 2px;
+  margin-top: 4px;
   background-color: @green;
   z-index: -1;
 }
@@ -104,11 +104,17 @@
   padding-bottom: 19px;
 
   @media (min-width: @tablet-width) {
-    padding: 26px 38px 28px 38px;
+    padding: 25px 39px 31px 38px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 14px 0 14px 0;
+  }
+}
+
+.supplements__card:last-child {
+  @media (min-width: @tablet-width) {
+    padding: 24px 39px 22px 38px;
   }
 }
 
@@ -136,5 +142,6 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     left: 0;
+    bottom: -10px;
   }
 }

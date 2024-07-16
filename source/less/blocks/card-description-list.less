@@ -8,11 +8,13 @@
   font-size: 12px;
   line-height: 16px;
   color: @specialgrey;
-  border-spacing: 0 5px;
+  border-spacing: 0 2px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    border-spacing: 7px 7px;
+    border-collapse: collapse;
   }
 }
 
@@ -26,13 +28,20 @@
 .card-description-list__parameter {
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+  }
 }
 
 .card-description-list__value {
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
   text-align: right;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+  }
 }
 
