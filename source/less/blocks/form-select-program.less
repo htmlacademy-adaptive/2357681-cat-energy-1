@@ -161,7 +161,7 @@
   stroke: @green;
 }
 
-.form-select-program__input:invalid + .form-select-program__icon {
+.form-select-program__input:invalid:focus + .form-select-program__icon {
   stroke: @red;
 }
 
@@ -183,16 +183,29 @@
   }
 }
 
+.form-select-program__input[type="number"]::-webkit-outer-spin-button,
+.form-select-program__input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.form-select-program__input[type='number'],
+.form-select-program__input[type="number"]:hover,
+.form-select-program__input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
 .form-select-program__item--to-write input:hover {
   border: 1px solid @darkbeige;
 }
 
 .form-select-program__item--to-write input:focus {
-  border: 2px solid @specialgrey;
+  border: 1px solid @specialgrey;
 }
 
-.form-select-program__item--to-write input:invalid {
-  border: 2px solid @red;
+.form-select-program__item--to-write input:invalid:focus {
+  border: 1px solid @red;
+  outline: none;
 }
 
 .form-select-program__item--to-write label {

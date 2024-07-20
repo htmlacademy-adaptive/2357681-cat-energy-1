@@ -33,14 +33,13 @@
 }
 
 .catalog__supplements-and-promo-wrapper {
+  overflow: hidden;
+
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 896px 245px;
+    column-gap: 80px;
     margin-bottom: 87px;
   }
 }
 
-.catalog__supplements {
-  @media (min-width: @desktop-width) {
-    width: 100%;
-  }
-}

@@ -64,10 +64,8 @@
 .stats__description {
   display: block;
   width: 87px;
-  padding: 0;
-  margin: 0;
-  margin-left: 18px;
-  margin-top: -9px;
+  padding: 0 5px;
+  margin: -10px auto 0;
   background-color: @darkgrey;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -83,6 +81,7 @@
     background-color: @white;
     width: 130px;
     margin-left: 20px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -93,14 +92,6 @@
     @media (min-width: @tablet-width) {
       width: 115px;
     }
-  }
-}
-
-.stats__description br {
-  display: block;
-
-  @media (min-width: @tablet-width) {
-    display: none;
   }
 }
 
