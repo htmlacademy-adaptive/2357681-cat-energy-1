@@ -11,18 +11,19 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 165px 290px;
-    column-gap: 155px;
+    column-gap: 160px;
   }
 }
 
 .supplemental-card__title {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   font-family: @oswald;
   font-weight: 400;
   font-size: 16px;
@@ -53,13 +54,15 @@
   color: @specialgrey;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 140px 50px;
-    column-gap: 33px;
+    grid-template-columns: 140px 60px;
+    column-gap: 34px;
+    justify-items: end;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 140px 50px;
-    column-gap: 95px;
+    column-gap: 103px;
+    justify-items: start;
   }
 }
 
@@ -72,6 +75,10 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
   }
 }
 
@@ -90,8 +97,8 @@
 }
 
 .supplemental-card__button {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   width: 100%;
   text-align: center;
 }

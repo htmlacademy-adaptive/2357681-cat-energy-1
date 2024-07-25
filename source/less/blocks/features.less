@@ -2,11 +2,16 @@
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 19px;
   }
 }
 
 .features__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -17,14 +22,32 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 250px 250px;
-    column-gap: 137px;
-    margin-bottom: 55px;
+    column-gap: 134px;
+    row-gap: 28px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 230px 246px 248px 250px;
-    column-gap: 83px;
-    margin-bottom: 69px;
+    grid-template-columns: 243px 246px 243px 254px;
+    column-gap: 81px;
+    margin-bottom: 47px;
+  }
+}
+
+.features__list::after {
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    height: 1px;
+    background-color: @middlegrey;
+    bottom: -25px;
+    left: -30px;
+    right: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: none;
   }
 }
 
@@ -44,7 +67,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
@@ -52,7 +75,7 @@
   }
 
   &:last-child {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
@@ -86,10 +109,10 @@
 
 .features__icon {
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
 
   @media (min-width: @tablet-width) {
-    bottom: 180px;
+    bottom: 174px;
   }
 }
 
@@ -100,5 +123,9 @@
 
   @media (min-width: @tablet-width) {
     padding: 140px 5px 78px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 162px 5px 78px 0;
   }
 }

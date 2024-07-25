@@ -8,21 +8,27 @@
 
   @media (min-width: @desktop-width) {
     background-color: rgba(0, 0, 0, 0);
-    margin-top: 49px;
+    margin-top: 48px;
   }
 }
 
 .main-header__row {
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
   }
 }
 
 .main-header__wrapper {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 540px;
+  }
 }
 
 .main-header__logo {
@@ -30,3 +36,4 @@
     margin-top: 9px;
   }
 }
+

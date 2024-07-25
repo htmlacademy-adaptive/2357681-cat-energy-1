@@ -11,12 +11,43 @@
 }
 
 .main-footer__location {
-  background-image: url("../img/pictures/footer-location.png");
+  background-image: url("../img/pictures/map-footer-phone.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 362px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/pictures/map-footer-phone-2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/pictures/map-footer-tablet.jpg");
+    height: 400px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pictures/map-footer-tablet-2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/pictures/map-footer-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pictures/map-footer-desktop-2x.jpg");
+    }
+  }
 }
 
 .main-footer__map {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+}
+
+.main-footer__connection {
+  background-color: @lightgrey;
 }
 

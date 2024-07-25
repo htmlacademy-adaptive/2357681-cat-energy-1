@@ -7,40 +7,40 @@
   line-height: 36px;
 
   @media (min-width: @tablet-width) {
-    margin: 65px 270px 24px 0;
+    margin: 50px 270px 53px 0;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 74px 270px 24px 0;
+    margin: 59px 270px 56px 0;
   }
 }
 
 .catalog__promotion {
-  margin-top: 35px;
-  margin-bottom: 25px;
+  margin-top: 37px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 70px;
+    margin-top: 78px;
     margin-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 192px;
+    margin-top: 197px;
     margin-bottom: 0;
   }
 }
 
 .catalog__supplements-and-promo-wrapper {
+  overflow: hidden;
+
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 896px 245px;
+    column-gap: 80px;
+    align-items: flex-start;
     margin-bottom: 87px;
   }
 }
 
-.catalog__supplements {
-  @media (min-width: @desktop-width) {
-    width: 100%;
-  }
-}

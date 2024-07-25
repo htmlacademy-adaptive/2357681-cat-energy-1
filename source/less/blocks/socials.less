@@ -1,15 +1,41 @@
 .socials__list {
+  position: relative;
   padding: 0;
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 37px;
   list-style-type: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
 }
+
+.socials__list::before,
+.socials__list::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 1px;
+  background-color: @beige;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
+
+.socials__list::before {
+  top: -20px;
+}
+
+.socials__list::after {
+  bottom: -20px;
+}
+
 
 .socials__item {
   &:not(:last-child) {

@@ -1,12 +1,26 @@
 .basic-card {
-  padding: 20px 0 25px 0;
-
-  &--show-more {
-    padding-top: 78px;
-  }
+  padding: 21px 0 22px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 30px 37px 40px 37px;
+    padding: 30px 36px 40px 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 33px 38px 40px 38px;
+  }
+
+  &--show-more {
+    padding-top: 82px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 110px;
+      padding: 0 37px 0 38px;
+      border: 1px solid @specialbeige;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 37px 0 37px;
+    }
   }
 }
 
@@ -21,6 +35,11 @@
 
 .basic-card__wrapper--product {
   position: relative;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .basic-card__wrapper--product::after {
@@ -31,8 +50,8 @@
     display: block;
     width: 324px;
     height: 430px;
-    top: 80px;
-    left: -30px;
+    top: 82px;
+    left: -36px;
     background-color: @lightgrey;
     z-index: -1;
   }
@@ -40,22 +59,32 @@
   @media (min-width: @desktop-width) {
     width: 245px;
     height: 430px;
+    top: 76px;
+    left: -37px;
   }
 }
 
 .basic-card__product-wrapper {
   display: flex;
-  margin-bottom: 17px;
+  margin-bottom: 16.5px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     margin-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin-bottom: 34px;
   }
 }
 
 .basic-card__info-wrapper {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
 }
 
 .basic-card__title {
@@ -76,17 +105,17 @@
   &--product {
     width: 76px;
     color: @specialblack;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 
     @media (min-width: @tablet-width) {
-      width: 63%;
+      width: 57%;
       text-align: center;
-      margin: 0 57px 21px 58px;
+      margin: 0 53px 16px 53px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 93%;
-      margin: 0 14px 23px 15px;
+      width: 90%;
+      margin: 0 14px 15px 8px;
     }
   }
 
@@ -94,12 +123,17 @@
     display: block;
     position: relative;
     color: @black;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
     text-align: center;
 
     @media (min-width: @tablet-width) {
-      padding-top: 160px;
-      padding-bottom: 23px;
+      padding-top: 165px;
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 149px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -123,12 +157,12 @@
 
   @media (min-width: @tablet-width) {
     width: 60px;
-    top: 100px;
-    right: 90px;
+    top: 80px;
+    right: 94px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 50px;
+    right: 55px;
   }
 }
 
@@ -144,12 +178,12 @@
 
   @media (min-width: @tablet-width) {
     width: 60px;
-    top: 100px;
-    right: 90px;
+    top: 78px;
+    right: 94px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 50px;
+    right: 55px;
   }
 }
 
@@ -157,53 +191,55 @@
   margin: 10px 36px;
 
   @media (min-width: @tablet-width) {
-    margin: 30px 55px 42px 55px;
+    margin: 30px 45px 38px 45px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 23px 0 35px 13px;
+    margin: 24px 0 29px 4px;
   }
 
   &--big {
     margin: 3px 28px;
 
     @media (min-width: @tablet-width) {
-      margin: 12px 53px 24px 53px;
+      margin: 12px 41px 21px 41px;
     }
 
     @media (min-width: @desktop-width) {
-      margin: 12px 0 24px 10px;
+      margin: 12px 0 16px 0;
     }
   }
 }
 
 .basic-card__button {
-  padding: 10px 109px;
+  padding: 8px 109px;
 
   @media (min-width: @tablet-width) {
-    padding: 10px 94px;
+    width: 100%;
+    padding: 7px 85px 9px 94px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 10px 53px;
+    padding: 7px 53px;
   }
 
   &--secondary {
     padding: 10px 95px;
 
     @media (min-width: @tablet-width) {
-      padding: 10px 80px;
+      width: 100%;
+      padding: 7px 78px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 10px 39px;
+      padding: 9px 37px 9px 38px;
     }
   }
 }
 
 .basic-card__promo {
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
   font-family: @lato;
   font-weight: 400;
   font-size: 12px;
@@ -216,5 +252,16 @@
     line-height: 18px;
     margin-bottom: 82px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 89px;
+  }
 }
 
+.basic-card__promo br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
