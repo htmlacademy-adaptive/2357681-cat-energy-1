@@ -161,14 +161,19 @@
 					</div>
 					<div class="product-promotion__slider slider">
 						<div class="slider__before">
-							<picture>
-								<source media="(min-width: 768px)" srcset="img/pictures/slider/before-tablet.webp, img/pictures/slider/before-tablet-x2.webp 2x" width="560" height="512"><img class="slider__before-img" src="img/pictures/slider/before-mobile.webp" width="280" height="256" srcset="img/pictures/slider/before-mobile-x2.webp 2x" alt="Кот до нашей диеты."></picture>
+							<picture class="slider__before-img">
+								<source type="image/webp" media="(min-width: 768px)" srcset="img/pictures/slider/before-tablet.webp, img/pictures/slider/before-tablet-x2.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/pictures/slider/before-mobile.webp, img/pictures/slider/before-mobile-x2.webp 2x" width="280" height="256">
+                <source media="(min-width: 768px)" srcset="img/pictures/slider/before-tablet.png, img/pictures/slider/before-tablet-x2.png 2x" width="560" height="512">
+                <img src="img/pictures/slider/before-mobile.png" width="280" height="256" srcset="img/pictures/slider/before-mobile-x2.png 2x" alt="Кот до нашей диеты.">
+              </picture>
 						</div>
 						<div class="slider__after">
 							<picture class="slider__after-img">
-								<source media="(min-width: 768px)" srcset="img/pictures/slider/after-tablet.webp, img/pictures/slider/after-tablet-x2.webp 2x" width="560" height="512">
-                <img src="img/pictures/slider/after-mobile.webp" width="280" height="256" srcset="img/pictures/slider/after-mobile-x2.webp 2x" alt="Кот после нашей диеты.">
-              </picture>
+								<source type="image/webp" media="(min-width: 768px)" srcset="img/pictures/slider/after-tablet.webp, img/pictures/slider/after-tablet-x2.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/pictures/slider/after-mobile.webp, img/pictures/slider/after-mobile-x2.webp 2x" width="280" height="256">
+                <source media="(min-width: 768px)" srcset="img/pictures/slider/after-tablet.png, img/pictures/slider/after-tablet-x2.png 2x" width="560" height="512">
+                <img src="img/pictures/slider/after-mobile.png" width="280" height="256" srcset="img/pictures/slider/after-mobile-x2.png 2x" alt="Кот до нашей диеты.">
 						</div>
 						<button class="slider__curtain" type="button">
 							<svg class="slider__toggle" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
