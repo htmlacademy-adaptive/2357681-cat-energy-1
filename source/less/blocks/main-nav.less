@@ -11,8 +11,12 @@
   cursor: pointer;
   border: none;
   background-color: @white;
-  top: -55px;
-  left: 300px;
+  top: -43px;
+  left: 307px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -24,8 +28,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 30px;
+    top: 8px;
+    right: 29px;
     width: 24px;
     height: 2px;
     background-color: @black;
