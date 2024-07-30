@@ -30,6 +30,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 243px 246px 243px 254px;
     column-gap: 81px;
+    align-items: flex-start;
     margin-bottom: 47px;
   }
 }
@@ -95,7 +96,11 @@
     text-align: center;
     z-index: -1;
     left: 46%;
-    bottom: 20px;
+    top: -10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 13px;
   }
 }
 
@@ -109,10 +114,14 @@
 
 .features__icon {
   position: absolute;
-  bottom: -8px;
+  top: -2px;
 
   @media (min-width: @tablet-width) {
-    bottom: 174px;
+    top: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 51px;
   }
 }
 

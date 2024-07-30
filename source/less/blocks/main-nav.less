@@ -1,6 +1,10 @@
 .main-nav {
   position: relative;
   width: auto;
+
+  @media (min-width: @desktop-width) {
+    position: static;
+  }
 }
 
 .main-nav__toggle {
@@ -98,12 +102,33 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    gap: 33px;
   }
 }
 
 .main-nav__list--has-background {
   @media (min-width: @desktop-width) {
     color: @white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      left: 50%;
+      top: 0;
+      background-image: image-set(
+        url("../img/pictures/hero-block-background-desktop.webp") type("image/webp") 1x,
+        url("../img/pictures/hero-block-background-desktop-x2.webp") type("image/webp") 2x,
+        url("../img/pictures/hero-block-background-desktop.jpg") type("image/jpg") 1x,
+        url("../img/pictures/hero-block-background-desktop-x2.jpg") type("image/jpg") 2x
+      );
+      background-color: @darkgreen;
+      background-size: 720px auto;
+      background-position: top right;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 }
 
@@ -114,7 +139,6 @@
     padding-bottom: 43px;
 
     @media (min-width: @tablet-width) {
-      padding-right: 33px;
       padding-bottom: 0;
     }
   }

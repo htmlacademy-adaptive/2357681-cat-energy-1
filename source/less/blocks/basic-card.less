@@ -49,8 +49,8 @@
     content: "";
     display: block;
     width: 324px;
-    height: 430px;
-    top: 82px;
+    height: calc(100% - 42px);
+    bottom: -40px;
     left: -36px;
     background-color: @lightgrey;
     z-index: -1;
@@ -58,8 +58,8 @@
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    height: 430px;
-    top: 76px;
+    height: calc(100% - 32px);
+    bottom: -43px;
     left: -37px;
   }
 }
