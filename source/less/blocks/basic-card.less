@@ -49,8 +49,8 @@
     content: "";
     display: block;
     width: 324px;
-    height: 430px;
-    top: 82px;
+    height: calc(100% - 42px);
+    bottom: -40px;
     left: -36px;
     background-color: @lightgrey;
     z-index: -1;
@@ -58,8 +58,8 @@
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    height: 430px;
-    top: 76px;
+    height: calc(100% - 32px);
+    bottom: -43px;
     left: -37px;
   }
 }
@@ -91,7 +91,7 @@
   display: block;
   margin: 0;
   padding: 0;
-  font-family: @oswald;
+  font-family: @oswald, "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -128,12 +128,16 @@
 
     @media (min-width: @tablet-width) {
       padding-top: 165px;
+      padding-left: 40px;
+      padding-right: 40px;
       margin-bottom: 23px;
     }
 
     @media (min-width: @desktop-width) {
       padding-top: 149px;
       margin-bottom: 24px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }
@@ -240,7 +244,7 @@
 .basic-card__promo {
   margin: 0;
   margin-bottom: 18px;
-  font-family: @lato;
+  font-family: @lato, "Arial", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -251,10 +255,14 @@
     font-size: 16px;
     line-height: 18px;
     margin-bottom: 82px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 89px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -264,4 +272,8 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+}
+
+.basic-card__link {
+  text-decoration: none;
 }

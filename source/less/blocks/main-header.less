@@ -29,6 +29,16 @@
   @media (min-width: @desktop-width) {
     margin-right: 540px;
   }
+
+  &--form {
+    @media (min-width: @tablet-width) {
+      margin-right: 98px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 540px;
+    }
+  }
 }
 
 .main-header__logo {
@@ -37,3 +47,14 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-header .container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .main-header__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
