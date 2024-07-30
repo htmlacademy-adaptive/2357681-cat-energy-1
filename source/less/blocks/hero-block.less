@@ -27,25 +27,6 @@
     @media (min-width: @tablet-width) {
       content: none;
     }
-
-    @media (min-width: @desktop-width) {
-      content: "";
-      position: absolute;
-      width: 50%;
-      height: 694px;
-      left: 50%;
-      top: -129px;
-      background-image: image-set(
-        url("../img/pictures/hero-block-background-desktop.webp") type("image/webp") 1x,
-        url("../img/pictures/hero-block-background-desktop-x2.webp") type("image/webp") 2x,
-        url("../img/pictures/hero-block-background-desktop.jpg") type("image/jpg") 1x,
-        url("../img/pictures/hero-block-background-desktop-x2.jpg") type("image/jpg") 2x
-      );
-      background-color: @darkgreen;
-      background-size: 720px auto;
-      background-position: top right;
-      background-repeat: no-repeat;
-    }
   }
 }
 
@@ -76,7 +57,7 @@
   padding-top: 27px;
   padding-bottom: 25px;
   margin: 0;
-  font-family: @oswald;
+  font-family: @oswald, "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -101,7 +82,7 @@
 .hero-block__slogan {
   margin: 0;
   margin-bottom: 29px;
-  font-family: @oswald;
+  font-family: @oswald, "Arial", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
