@@ -10,8 +10,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 95%;
+    width: 100%;
     margin-bottom: 51px;
+    justify-content: start;
+    gap: 42px;
   }
 }
 
@@ -36,6 +38,10 @@
       line-height: 37px;
       padding: 15px 30px 21px 31px;
     }
+
+    @media (min-width: @desktop-width) {
+      padding: 14px 28px 21px 28px;
+    }
   }
 
   &--small {
@@ -57,7 +63,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 17px 55px 18px 47px;
+      padding: 15px 58px 18px 55px;
     }
   }
 }
@@ -87,6 +93,7 @@
 
   @media (min-width: @desktop-width) {
     background-color: @darkgrey;
+    margin-left: 19px;
   }
 
   &--left {
